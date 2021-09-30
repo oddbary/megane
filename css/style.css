@@ -50,6 +50,10 @@ a.has-text-primary:hover{
 .has-background-primary-light{
   background: #E9FEF0 !important;
 }
+.section{
+  padding-left: 0;
+  padding-right: 0;
+}
 
 .gap-1{
   gap: 0 8px;
@@ -91,6 +95,7 @@ a.has-text-primary:hover{
   color: #888 !important;
   background: #fff !important;
   font-size: 13px;
+  height: 1.9em;
 }
 
 /* top section header */
@@ -125,8 +130,10 @@ a.has-text-primary:hover{
 .c-under_info{
   margin-top: 8px;
 }
-.c-under_info p{
+.dete{
   margin-left: 8px;
   color: #888;
-  font-family: 'Poppins', sans-serif;
+  font-family: brandon-grotesque, sans-serif;
+  letter-spacing: 0.04em;
+  font-weight: 500;
 }
