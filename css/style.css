@@ -114,6 +114,33 @@ a.has-text-primary:hover{
 }
 
 /* top section header */
+.main-slide{
+  background-image: url("../img/slide-bg.jpg");
+  background-position: 0 40px;
+  background-repeat-y: no-repeat;
+  margin-top: 20px;
+  background-size: cover;
+}
+.swiper{
+  padding-bottom: 50px !important;
+}
+.swiper-pagination{
+  bottom: 19px !important;
+}
+.swiper-pagination-bullet-active{
+  background: #00A043 !important;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev,
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+ background: hsla(145, 100%, 31%, 0.9);
+ height: 60px !important;
+ width: 60px !important;
+ border-radius: 30px;
+}
+.swiper-button-next:after, .swiper-button-prev:after{
+  font-size: 20px !important;
+  color: #fff;
+}
 .c-sectionh_icon{
   background: #E9FEF0;
   width: 60px;

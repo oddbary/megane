@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>プライム21</title>
-    <script src="https://kit.fontawesome.com/ba68847ce1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/rrg6pdr.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/ba68847ce1.js" crossorigin="anonymous"></script>
 </head>
   <body>
     <header class="container is-max-widescreen pt-4 pb-4">
@@ -74,15 +74,18 @@
             </div>
         </div>
     </header>
-    <main class="container is-fullhd">
-        <section class="hero">
-            <div class="hero-body">
-                <p class="title">
-                Hero title
-                </p>
-                <p class="subtitle">
-                Hero subtitle
-                </p>
+    <main>
+        <section class="main-slide">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/slide-sample.png" alt="sample"></div>
+                    <div class="swiper-slide"><img src="img/slide-sample.png" alt="sample"></div>
+                    <div class="swiper-slide"><img src="img/slide-sample.png" alt="sample"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </section>
         <div class="container is-max-widescreen">
@@ -645,6 +648,24 @@
             </p>
         </div>
     </footer>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
+
+		var swiper = new Swiper ('.swiper', {
+            centeredSlides: true,
+            slidesPerView: 1.8,
+            spaceBetween: 16,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+	</script>
   </body>
 </html>
