@@ -43,6 +43,12 @@ a.has-text-primary:hover{
 .button.is-dark{
   background: #E04949 !important;
 }
+.button.is-light{
+  background: #E9FEF0 !important;
+  color: #00A043 !important;
+  box-shadow: none;
+  border: 1px solid #00A043;
+}
 
 .has-background-primary{
   background: #00A043 !important;
@@ -53,6 +59,11 @@ a.has-text-primary:hover{
 .section{
   padding-left: 0;
   padding-right: 0;
+}
+@media screen and (min-width: 1024px){
+  .section {
+      padding: 32px 0;
+  }
 }
 
 .gap-1{
@@ -96,6 +107,10 @@ a.has-text-primary:hover{
   background: #fff !important;
   font-size: 12px;
   height: 1.9em !important;
+}
+.box{
+  box-shadow: none;
+  border: 1px solid #eee;
 }
 
 /* top section header */
@@ -190,4 +205,38 @@ a.has-text-primary:hover{
 }
 .price span{
   font-weight: 600;
+}
+.corp-name{
+  font-size: 11px;
+  color: #888;
+}
+.interview-item .box{
+  padding: 0;
+  position: relative;
+}
+.interview-item .box::after{
+  content: "";
+  height: 10px;
+  width: 10px;
+  border-top: 10px solid transparent;
+  border-right: 10px solid #E04949;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+.interview-item a{
+  display: block;
+  padding: 1.25rem;
+}
+.interview-info{
+  text-align: center;
+}
+.interview-name{
+  font-size: 16px;
+  font-weight: bold;
+}
+.button-all{
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-size: 14px;
 }
