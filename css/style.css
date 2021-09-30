@@ -44,6 +44,17 @@ a.has-text-primary:hover{
   background: #E04949 !important;
 }
 
+.has-background-primary{
+  background: #00A043 !important;
+}
+.has-background-primary-light{
+  background: #E9FEF0 !important;
+}
+
+.gap-1{
+  gap: 0 8px;
+}
+
 /* header */
 .c_mainnav{
   display: flex;
@@ -62,6 +73,24 @@ a.has-text-primary:hover{
 }
 .c_mainnav img{
   margin-right: 5px;
+}
+.tabs{
+  margin-bottom: 0 !important;
+  font-size: 14px;
+  font-weight: bold;
+}
+.tabs ul{
+  padding-bottom: 1px;
+  border-bottom: 2px solid #00A043;
+}
+.tabs ul a{
+  border-width: 0 !important;
+}
+.tag{
+  border: 1px solid #888 !important;
+  color: #888 !important;
+  background: #fff !important;
+  font-size: 13px;
 }
 
 /* top section header */
@@ -87,4 +116,17 @@ a.has-text-primary:hover{
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.1em;
+}
+.c-info_list{
+  font-size: 13px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+.c-under_info{
+  margin-top: 8px;
+}
+.c-under_info p{
+  margin-left: 8px;
+  color: #888;
+  font-family: 'Poppins', sans-serif;
 }
