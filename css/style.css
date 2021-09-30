@@ -267,3 +267,10 @@ a.has-text-primary:hover{
   padding-bottom: 24px;
   font-size: 14px;
 }
+
+.sidebar{
+  min-width: 324px;
+}
+.maincolumn{
+  max-width: 784px;
+}
