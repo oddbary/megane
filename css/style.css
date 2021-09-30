@@ -175,3 +175,19 @@ a.has-text-primary:hover{
   vertical-align: middle;
   height: auto;
 }
+.products-name{
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.brand-name{
+  font-size: 13px;
+  color: #888;
+}
+.price{
+  font-family: brandon-grotesque, sans-serif;
+  margin: 0 4px;
+  font-weight: 500;
+}
+.price span{
+  font-weight: 600;
+}
