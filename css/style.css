@@ -44,11 +44,11 @@ a.has-text-primary:hover{
   background: #E04949 !important;
 }
 
+/* header */
 .c_mainnav{
   display: flex;
   border-right: 1px solid #eee;
 }
-
 .c_mainnav a{
   flex: 1;
   text-align: center;
@@ -62,4 +62,29 @@ a.has-text-primary:hover{
 }
 .c_mainnav img{
   margin-right: 5px;
+}
+
+/* top section header */
+.c-sectionh_icon{
+  background: #E9FEF0;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: #00A043;
+  border-radius: 30px;
+}
+.c-sectionh_icon img{
+  vertical-align: middle;
+}
+.c-sectionh .title{
+  font-size: 25px;
+  margin-bottom: 1em;
+  letter-spacing: 0.07em;
+}
+.c-sectionh .subtitle{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.1em;
 }
