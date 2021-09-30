@@ -50,6 +50,10 @@ a.has-text-primary:hover{
 .has-background-primary-light{
   background: #E9FEF0 !important;
 }
+.section{
+  padding-left: 0;
+  padding-right: 0;
+}
 
 .gap-1{
   gap: 0 8px;
