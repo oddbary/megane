@@ -4,6 +4,9 @@ body{
   color: #252525;
   font-family: 'Noto Sans JP', sans-serif;
 }
+a{
+  color: #252525;
+}
 
 .has-text-primary,
 a.has-text-primary{
@@ -32,10 +35,31 @@ a.has-text-primary:hover{
   padding: 12px 30px;
   height: auto;
   box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.1);
+  font-family: 'Noto Sans JP', sans-serif !important;
 }
 .button.is-primary{
   background: #00A043 !important;
 }
 .button.is-dark{
   background: #E04949 !important;
+}
+
+.c_mainnav{
+  display: flex;
+  border-right: 1px solid #eee;
+}
+
+.c_mainnav a{
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  border-left: 1px solid #eee;
+}
+.c_mainnav img,
+.c_mainnav span{
+  vertical-align: middle;
+}
+.c_mainnav img{
+  margin-right: 5px;
 }
