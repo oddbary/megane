@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.typekit.net/rrg6pdr.css">
     </head>
-    <body>
+    <body class="admin">
         <header>
 
         </header>
@@ -34,14 +34,14 @@
                             <div class="field">
                                 <label class="label">パスワード</label>
                                 <div class="control">
-                                    <input class="input" type="text" placeholder="パスワードを入力">
+                                    <input class="input" type="password" placeholder="パスワードを入力">
                                 </div>
                             </div>
-                            <div class="login-button">
+                            <div class="admin-button-wrap">
                                 <button class="button is-primary">ログイン</button>
-                            </div>
-                            <div>
-                                <a href="">アカウントを作成</a>
+                                <div>
+                                    <a href="#">アカウントを作成</a>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -51,24 +51,5 @@
         <footer>
 
         </footer>
-        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-        <script type="module">
-            import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
-
-            var swiper = new Swiper ('.swiper', {
-                centeredSlides: true,
-                slidesPerView: 1.8,
-                spaceBetween: 16,
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            });
-        </script>
     </body>
 </html>
