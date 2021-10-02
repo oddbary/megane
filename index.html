@@ -182,9 +182,9 @@
         <section class="main-slide">
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="img/slide-sample.png" alt="sample"></div>
-                    <div class="swiper-slide"><img src="img/slide-sample.png" alt="sample"></div>
-                    <div class="swiper-slide"><img src="img/slide-sample.png" alt="sample"></div>
+                    <div class="swiper-slide"><a href="/about"><img src="img/slide-sample.png" alt="sample"></a></div>
+                    <div class="swiper-slide"><a href="/column/column-detail"><img src="img/slide-sample.png" alt="sample"></a></div>
+                    <div class="swiper-slide"><a href="/column/column-detail"><img src="img/slide-sample.png" alt="sample"></a></div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <!-- If we need navigation buttons -->
@@ -196,8 +196,7 @@
             <div class="columns">
                 <div class="maincolumn column is-9">
                     <section class="mb-5">
-                        <a class="top-banner" href="">
-                            <!--aのhrefとimgのaltの設定お願いします-->
+                        <a class="top-banner" href="/diagnosis">
                             <img src="img/banner.png" alt="">
                         </a>
                     </section>
@@ -755,10 +754,10 @@
     </main>
     <footer>
         <div class="footer">
-            <div class="container is-max-widescreen">
-                <div class="columns">
-                    <div class="column">
-                        <div>
+            <div class="container is-widescreen">
+                <div class="columns is-variable is-8">
+                    <div class="column is-3 footer-info">
+                        <div class="is-size-7">
                             眼鏡店専門ボラリティチェーン
                         </div>
                         <div>
@@ -766,108 +765,110 @@
                                 <img src="img/logo.png" alt="プライム21">
                             </a>
                         </div>
-                        <div>
-                            <i></i>
+                        <div class="footer-phone">
+                            <i class="fas fa-phone"></i>
                             047-496-3305
                         </div>
                     </div>
-                    <div class="column is-align-items-center">
-                        <div>
+                    <div class="column is-3">
+                        <div class="is-size-7 has-text-weight-bold has-text-grey has-text-centered mb-2">
                             お問い合わせ・資料請求はこちら
                         </div>
-                        <div class="buttons is-flex-direction-column">
-                            <button class="button">
+                        <div class="buttons">
+                            <button class="button is-dark is-small is-fullwidth">
                                 <span class="icon">
-                                    <i class="fab fa-github"></i>
+                                    <i class="fas fa-envelope"></i>
                                 </span>
                                 <span>お問い合わせフォーム</span>
                             </button>
-                            <button class="button">
+                            <button class="button is-primary is-small is-fullwidth">
                                 <span class="icon">
-                                    <i class="fab fa-github"></i>
+                                    <i class="fas fa-file"></i>
                                 </span>
                                 <span>無料で資料請求</span>
                             </button>
                         </div>
                     </div>
-                    <div class="columns">
-                        <ul class="menu column">
-                            <li>
-                                <a href="" class="menu-label">
-                                    ホーム
+                    <div class="column is-5">
+                        <div class="columns footer-menu">
+                            <ul class="menu column is-5">
+                                <li>
+                                    <a href="/" class="menu-label">
+                                        ホーム
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/about" class="menu-label">
+                                        プライム21とは
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/planning" class="menu-label">
+                                        展示会・イベント情報
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/product" class="menu-label">
+                                        商品一覧
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="menu column is-4">
+                                <a href="/column" class="menu-label">
+                                    コラム
                                 </a>
-                            </li>
-                            <li>
-                                <a href="" class="menu-label">
-                                    プライム21とは
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="menu-label">
-                                    展示会・イベント情報
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="menu-label">
-                                    商品一覧
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="menu column">
-                            <a href="" class="menu-label">
-                                コラム
-                            </a>
-                            <li>
-                                <a href="" class="menu-list">
-                                    経営者コラム
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="menu-list">
-                                    企画販促コラム
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="menu-list">
-                                    主催者コラム
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="menu-list">
-                                    特選品コラム
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="menu column">
-                            <li>
-                                <a href="" class="menu-label">
-                                    経営者診断
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" class="menu-label">
-                                    会社概要
-                                </a>
-                            </li>
-                        </ul>
+                                <li>
+                                    <a href="" class="menu-list">
+                                        経営者コラム
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="menu-list">
+                                        企画販促コラム
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="menu-list">
+                                        主催者コラム
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="menu-list">
+                                        特選品コラム
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="menu column is-3">
+                                <li>
+                                    <a href="" class="menu-label">
+                                        経営者診断
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="menu-label">
+                                        会社概要
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container is-max-widescreen">
-            <ul class="columns is-justify-content-space-between">
-                <li class="column">
-                    <a href="">
+        <div class="container is-widescreen navbar footer-bottom">
+            <ul class="navbar-start">
+                <li class="navbar-item">
+                    <a class="is-size-7 has-text-grey" href="#">
                         プライバシーポリシー
                     </a>
                 </li>
-                <li class="column">
-                    <a href="">
+                <li class="navbar-item">
+                    <a class="is-size-7 has-text-grey" href="#">
                         特定商取引法に関する表示
                     </a>
                 </li>
             </ul>
-            <p>
+            <p class="is-size-7 has-text-grey navbar-end navbar-item">
                 Copyright © prime21 All rights reserved.
             </p>
         </div>
