@@ -274,3 +274,30 @@ a.has-text-primary:hover{
 .maincolumn{
   max-width: 784px;
 }
+
+/* subpage */
+.page-title{
+  text-align: center;
+  padding-top: 54px;
+}
+.page-title h1::after{
+  content: "";
+  display: block;
+  width: 100px;
+  height: 0;
+  border-bottom: 2px dashed #00A043;
+  margin: 20px auto;
+}
+.page-title p{
+  font-size: 14px;
+}
+.breadcrumb-wrap{
+  background: #fafafa;
+  padding: 5px 0;
+}
+.breadcrumb{
+  font-size: 12px;
+}
+.breadcrumb a{
+  color: #aaa;
+}
