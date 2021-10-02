@@ -121,6 +121,27 @@ p{
   box-shadow: none;
   border: 1px solid #eee;
 }
+.pagination-list{
+  font-family: brandon-grotesque, sans-serif;
+  font-size: 14px;
+}
+.pagination-previous,
+.pagination-next{
+  background: #00A043;
+  color: #fff;
+  border-color: #00A043;
+}
+.pagination-previous:hover,
+.pagination-next:hover{
+  color: #fff;
+  opacity: 0.8;
+  border-color: #00A043;
+}
+.pagination-link.is-current{
+  border-color: #00A043;
+  background: #fff;
+  color: #00A043;
+}
 
 /* top section header */
 .main-slide{
