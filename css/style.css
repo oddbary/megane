@@ -314,11 +314,25 @@ p{
   font-size: 14px;
 }
 
-.sidebar{
-  min-width: 324px;
-}
 .maincolumn{
-  max-width: 784px;
+  max-width: 750px;
+}
+@media screen and (min-width: 1216px){
+  .sidebar{
+    min-width: 324px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1216px){
+  .maincolumn{
+    margin-right: 40px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1216px){
+  .container:not(.is-max-desktop) {
+      max-width: 1100px;
+  }
 }
 
 /* subpage */
