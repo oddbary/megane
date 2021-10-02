@@ -35,6 +35,10 @@ a.has-text-primary:hover{
 .navbar-brand img{
   max-height: 40px;
 }
+.button.is-primary a,
+.button.is-dark a{
+  color: #fff;
+}
 
 .button{
   font-size: 15px;
@@ -1090,7 +1094,7 @@ footer .navbar-item img{
 .admin-button-wrap button{
   margin-bottom: 10px;
 }
-.admin-button-wrap a{
+.admin-button-wrap div a{
   font-size: 14px;
   color: #00A043;
 }
