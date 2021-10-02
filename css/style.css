@@ -374,6 +374,66 @@ p{
   display: block;
   margin-bottom: 16px;
 }
+.search-wrap{
+  position: relative;
+}
+.search-wrap button{
+  background-image: url("../img/search-icon.svg");
+  position: absolute;
+  right: 10px;
+  top: 4px;
+  height: 32px;
+  width: 32px;
+  background-color: transparent;
+  border: 0;
+}
+.sidebar-menu-label{
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #00A043;
+  color: #00A043;
+  margin-bottom: 0 !important; 
+}
+.sidebar-menu-label img{
+  vertical-align: middle;
+  margin-right: 4px;
+  display: inline-block;
+}
+.sidebar .sidebar-menu{
+  margin-top: 32px;
+}
+.sidebar-menu-list{
+  margin-bottom: 0;
+}
+.sidebar-menu-label-second{
+  background: #00A043;
+  color: #fff;
+  padding: 4px 12px;
+  font-weight: bold;
+}
+.menu-list a{
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  padding: 12px 12px;
+  position: relative;
+}
+.menu-list a:after{
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  font-weight: bold;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  color: #bdbdbd;
+}
+.menu-list a:hover{
+  background :rgba(0, 0, 0, 0.04);
+}
+.menu-list li:not(:last-child){
+  border-bottom: 1px solid #eee;
+}
 
 /* subpage */
 
@@ -481,7 +541,7 @@ p{
   margin-right: 8px;
 }
 .appeal-item:not(:last-child){
-  margin-bottom: 40px;
+  margin-bottom: 8px;
 }
 .map-img{
   width: 100%;
@@ -497,6 +557,57 @@ p{
 }
 .partnership-menu .column-inner{
   height: 100%;
+}
+.partnership-map{
+  position: relative;
+}
+.partnership-map .map-button button a{
+  display: block;
+  padding: 2px 8px 4px;
+  padding-right: 20px;
+  width: 102px;
+} 
+.partnership-map .map-button button{
+  font-size: 12px;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+.partnership-map .map-button button a:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f063";
+  font-weight: bold;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  color: #bdbdbd;
+}
+.map-button{
+  position: absolute;
+}
+#map-button-1{
+  right: 20%;
+  top: 30%;
+}
+#map-button-2{
+  top: 60%;
+  right: 23%;
+}
+#map-button-3{
+  top: 48%;
+  left: 32%;
+}
+#map-button-4{
+  top: 79%;
+  right: 37%;
+}
+#map-button-5{
+  top: 65%;
+  left: 17%;
+}
+#map-button-6{
+  top: 90%;
+  left: 35%;
 }
 #map-menu-1 .column-inner{
   background: hsla(202, 55%, 73%, 0.2);
