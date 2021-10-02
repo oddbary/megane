@@ -370,3 +370,48 @@ p{
 .appeal-item:not(:last-child){
   margin-bottom: 40px;
 }
+.map-img{
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.partnership-menu .column{
+  font-size: 14px;
+}
+.partnership-menu .title{
+  color: #fff;
+  padding: 8px 12px;
+}
+.partnership-menu .column-inner{
+  height: 100%;
+}
+#map-menu-1 .column-inner{
+  background: hsla(202, 55%, 73%, 0.2);
+}
+#map-menu-1 .title{
+  background: #94C4E0;
+}
+#map-menu-2 .column-inner{
+  background: hsla(159, 47%, 49%, 0.2)
+}
+#map-menu-2 .title{
+  background: hsla(159, 47%, 49%, 1)
+}
+#map-menu-3 .column-inner{
+  background: hsla(68, 64%, 55%, 0.2)
+}
+#map-menu-3 .title{
+  background: hsla(68, 64%, 55%, 1)
+}
+#map-menu-4 .column-inner{
+  background: hsla(38, 99%, 66%, 0.2)
+}
+#map-menu-4 .title{
+  background: hsla(38, 99%, 66%, 1)
+}
+#map-menu-5 .column-inner{
+  background: hsla(0, 100%, 85%, 0.2)
+}
+#map-menu-5 .title{
+  background: hsla(0, 100%, 85%, 1)
+}
