@@ -56,10 +56,8 @@ a.has-text-primary:hover{
 .has-background-primary-light{
   background: #E9FEF0 !important;
 }
-@media screen and (min-width: 1024px){
-  .section {
-      padding: 16px 0;
-  }
+.section {
+    padding: 16px 0;
 }
 form .field{
   margin-bottom: 20px !important;
@@ -355,6 +353,7 @@ header{
   background: #fff !important;
   font-size: 12px;
   height: 1.9em !important;
+  margin-right: 0 !important;
 }
 .box{
   box-shadow: none;
@@ -494,6 +493,18 @@ header{
 .price span{
   font-weight: 600;
 }
+@media screen and (max-width: 768px){ /* スマホの場合 */
+  .img-block a{
+    min-height: 240px;
+    height: auto;
+  }
+  .products-name{
+    font-size: 15px;
+  }
+  .price{
+    font-size: 24px !important;
+  }
+}
 .corp-name{
   font-size: 11px;
   color: #888;
@@ -512,6 +523,18 @@ header{
   right: 5px;
   bottom: 5px;
 }
+.interview-item .box{
+  text-align: center;
+}
+@media screen and (max-width: 768px){
+  .tile:not(.is-child) {
+    display: flex;
+  }
+  .tile.is-3 {
+      flex: none;
+      width: 50%;
+  }
+}
 .interview-item a{
   display: block;
   padding: 1.25rem;
@@ -524,10 +547,12 @@ header{
   font-weight: bold;
 }
 .button-all{
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 14px;
   margin-top: 16px !important;
+  width: 100%;
+  max-width: 500px;
 }
 
 .maincolumn{
@@ -661,6 +686,12 @@ header{
 }
 .menu-list li:not(:last-child){
   border-bottom: 1px solid #eee;
+}
+@media screen and (max-width: 768px){
+  .sidebar .sidebar-images{
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 /* subpage */
