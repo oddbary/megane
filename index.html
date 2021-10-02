@@ -1,744 +1,857 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>プライム21</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.typekit.net/rrg6pdr.css">
-        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-        <script src="https://kit.fontawesome.com/ba68847ce1.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <header class="container is-widescreen pt-4 pb-4">
-            <div class="container is-widescreen">
-                <div class="is-flex is-justify-content-space-between content is-small mb-3">
-                    <div class="p-0 has-text-grey">
-                        販促と企画のプロ集団！眼鏡専門店のネットワークグループ
-                    </div>
-                    <div class="is-flex has-text-weight-bold">
-                        <a href="#" class="c-header_toplinkitem pl-4 has-text-primary icon-text">
-                            <span class="icon icon-slim"><i class="fas fa-caret-right"></i></span><span>ログイン</span>
-                        </a>
-                        <a  href="#" class="c-header_toplinkitem pl-4 has-text-primary icon-text">
-                            <span class="icon icon-slim"><i class="fas fa-caret-right"></i></span><span>アカウント作成</span>
-                        </a>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>プライム21</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/rrg6pdr.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/ba68847ce1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="pt-4 pb-4">
+        <div class="container is-widescreen">
+            <div class="header-top is-flex is-justify-content-space-between content is-small mb-3">
+                <div class="p-0 has-text-grey">
+                    販促と企画のプロ集団！眼鏡専門店のネットワークグループ
+                </div>
+                <div class="is-flex has-text-weight-bold">
+                    <a href="#" class="c-header_toplinkitem pl-4 has-text-primary icon-text">
+                        <span class="icon icon-slim"><i class="fas fa-caret-right"></i></span><span>ログイン</span>
+                    </a>
+                    <a href="#" class="c-header_toplinkitem pl-4 has-text-primary icon-text">
+                        <span class="icon icon-slim"><i class="fas fa-caret-right"></i></span><span>アカウント作成</span>
+                    </a>
+                </div>
+            </div>
+            <div class="navbar mb-5">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/">
+                        <img src="img/logo.png" alt="プライム21">
+                    </a>
+                </div>
+                <div class="navbar-end">
+                    <div class="buttons">
+                        <button class="button is-dark">
+                            <span class="icon">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <span>お問い合わせフォーム</span>
+                        </button>
+                        <button class="button is-primary">
+                            <span class="icon">
+                                <i class="fas fa-file"></i>
+                            </span>
+                            <span>無料で資料請求</span>
+                        </button>
                     </div>
                 </div>
-                <div class="navbar mb-5">
-                    <div class="navbar-brand">
-                        <a class="navbar-item" href="/">
-                            <img src="img/logo.png" alt="プライム21">
+            </div>
+            <div id="global-nav">
+                <div class="container is-widescreen c_mainnav">
+                    <a href="/">
+                        <img src="./img/gm1.svg"><span>ホーム</span>
+                    </a>
+                    <a href="/about">
+                        <img src="./img/gm2.svg"><span>プライム21とは</span>
+                    </a>
+                    <a href="/event">
+                        <img src="./img/gm3.svg"><span>展示会・イベント情報</span>
+                    </a>
+                    <a href="/product">
+                        <img src="./img/gm4.svg"><span>商品一覧</span>
+                    </a>
+                    <a href="/column">
+                        <img src="./img/gm5.svg"><span>コラム</span>
+                    </a>
+                    <a href="/company">
+                        <img src="./img/gm6.svg"><span>会社概要</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+            /**
+             * グローバルナビのクローンを生成
+             */
+            function setCloneNav() {
+                var body = document.body;
+                var globalNav = document.getElementById('global-nav');
+
+                if (!globalNav) return;
+
+                var cloneNav = globalNav.cloneNode(true);
+                cloneNav.id = 'js-clone-nav';
+                cloneNav.classList.add('clone-nav');
+
+                body.insertBefore(cloneNav, body.firstChild);
+            }
+            setCloneNav();
+
+            /**
+             * グローバルナビのクローンをページ上部に移動・固定
+             */
+            function fixedGlobalNav() {
+                var scrollY = window.pageYOffset;
+                var trigger = document.getElementById('js-trigger');
+                var cloneNav = document.getElementById('js-clone-nav');
+
+                if (!cloneNav || !trigger) return;
+
+                var triggerClientRect = trigger.getBoundingClientRect();
+                var triggerY = scrollY + triggerClientRect.top;
+                if (scrollY > triggerY) {
+                    cloneNav.classList.add('is-fixed-nav');
+                } else {
+                    cloneNav.classList.remove('is-fixed-nav');
+                }
+            }
+            window.addEventListener('scroll', fixedGlobalNav);
+        </script>
+
+        <div class="sp-header navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="./img/logo.png" alt="プライム21">
+            </a>
+            <div id="hamburger">
+                <span></span>
+            </div>
+        </div>
+        <nav class="sp-nav" id="sp-nav">
+            <div class="sp-nav-ineer">
+                <ul>
+                    <li>
+                        <a href="/">
+                            <span>ホーム</span>
                         </a>
+                    </li>
+                    <li>
+                        <a href="/about">
+                            <span>プライム21とは</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/event">
+                            <span>展示会・イベント情報</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/product">
+                            <span>商品一覧</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/column">
+                            <span>コラム</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/company">
+                            <span>会社概要</span>
+                        </a>
+                    </li>
+                </ul>
+                <div id="close" class="close"><span>CLOSE</span></div>
+            </div>
+        </nav>
+        <script>
+            var nav = document.getElementById('sp-nav');
+            var hamburger = document.getElementById('hamburger');
+            var close = document.getElementById('close');
+           
+            hamburger.addEventListener('click', function() {
+              hamburger.classList.toggle('active');
+              nav.classList.toggle('active');
+            });
+            close.addEventListener('click', function() {
+              hamburger.classList.remove('active');
+              nav.classList.remove('active');
+            });
+        </script>
+    </header>
+    <main>
+        <section class="main-slide">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/slide-sample.png" alt="sample"></div>
+                    <div class="swiper-slide"><img src="img/slide-sample.png" alt="sample"></div>
+                    <div class="swiper-slide"><img src="img/slide-sample.png" alt="sample"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        <div class="container is-widescreen main-wrap" id="js-trigger">
+            <div class="columns">
+                <div class="maincolumn column is-9">
+                    <section class="mb-5">
+                        <a class="top-banner" href="">
+                            <!--aのhrefとimgのaltの設定お願いします-->
+                            <img src="img/banner.png" alt="">
+                        </a>
+                    </section>
+                    <section calss="infomation section">
+                        <div class="c-sectionh level">
+                            <div class="level-left">
+                                <div class="level-item">
+                                    <i class="c-sectionh_icon"><img src="img/icon-infomation.svg" /></i>
+                                </div>
+                                <div>
+                                    <h1 class="title">最新情報</h1>
+                                    <h2 class="subtitle is-6 has-text-primary">INFOMATION</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs is-boxed is-fullwidth">
+                            <!--CSSでtabsのwhite-spaceをnoneに、overflow-xをなくさないとスクロールになってしまう-->
+                            <ul class="info-category gap-1">
+                                <li class="category-title is-active">
+                                    <!--cssでcategory-titleのpadding-bottomを0にする-->
+                                    <!--cssでhas-textのhoverをなくす-->
+                                    <a class="has-text-white has-background-primary">
+                                        <span>ニュース</span>
+                                    </a>
+                                </li>
+                                <li class="category-title">
+                                    <a class="has-text-primary-dark has-background-primary-light">
+                                        <span>カテゴリ1</span>
+                                    </a>
+                                </li>
+                                <li class="category-title">
+                                    <a class="has-text-primary-dark has-background-primary-light">
+                                        <span>カテゴリ2</span>
+                                    </a>
+                                </li>
+                                <li class="category-title">
+                                    <a class="has-text-primary-dark has-background-primary-light">
+                                        <span>カテゴリ3</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="c-info_list">
+                                <p><a
+                                        href="#">ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。</a>
+                                </p>
+                                <div class="c-under_info level-left">
+                                    <span class="tag">
+                                        カテゴリ名
+                                    </span>
+                                    <p class="dete">2021.10.1 21:00</p>
+                                </div>
+                            </div>
+                            <div class="c-info_list">
+                                <p><a
+                                        href="#">ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。</a>
+                                </p>
+                                <div class="c-under_info level-left">
+                                    <span class="tag">
+                                        カテゴリ名
+                                    </span>
+                                    <p class="dete">2021.10.1 21:00</p>
+                                </div>
+                            </div>
+                            <div class="c-info_list">
+                                <p><a
+                                        href="#">ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。</a>
+                                </p>
+                                <div class="c-under_info level-left">
+                                    <span class="tag">
+                                        カテゴリ名
+                                    </span>
+                                    <p class="dete">2021.10.1 21:00</p>
+                                </div>
+                            </div>
+                            <div class="c-info_list">
+                                <p><a
+                                        href="#">ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。</a>
+                                </p>
+                                <div class="c-under_info level-left">
+                                    <span class="tag">
+                                        カテゴリ名
+                                    </span>
+                                    <p class="dete">2021.10.1 21:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="article-list section">
+                        <div class="article-items columns is-flex-wrap-wrap">
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="img/article-image.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <span class="tag red">
+                                            NEW
+                                        </span>
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="img/article-image.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <span class="tag red">
+                                            NEW
+                                        </span>
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="img/article-image.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <span class="tag red">
+                                            NEW
+                                        </span>
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="img/article-image.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <span class="tag red">
+                                            NEW
+                                        </span>
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="img/article-image.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <span class="tag red">
+                                            NEW
+                                        </span>
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="img/article-image.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <span class="tag red">
+                                            NEW
+                                        </span>
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <button class="button column button-all is-light m-auto is-half">
+                            <span>コラム一覧へ</span>
+                        </button>
+                    </section>
+                    <section class="planning section">
+                        <div class="c-sectionh level">
+                            <div class="level-left">
+                                <div class="level-item">
+                                    <i class="c-sectionh_icon"><img src="img/icon-planning.svg" /></i>
+                                </div>
+                                <div>
+                                    <h1 class="title">販促企画情報</h1>
+                                    <h2 class="subtitle is-6 has-text-primary">PLANNING</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="planning-items columns is-flex-wrap-wrap">
+                            <div class="planning-item column is-one-third">
+                                <div class="img-block"><a href=""><img src="img/planning-image.png" alt=""></a></div>
+                                <h3 class="title is-6"><a href="">2013年10月販促情報</a></h3>
+                            </div>
+                            <div class="planning-item column is-one-third">
+                                <div class="img-block"><a href=""><img src="img/planning-image.png" alt=""></a></div>
+                                <h3 class="title is-6"><a href="">2013年10月販促情報</a></h3>
+                            </div>
+                            <div class="planning-item column is-one-third">
+                                <div class="img-block"><a href=""><img src="img/planning-image.png" alt=""></a></div>
+                                <h3 class="title is-6"><a href="">2013年10月販促情報</a></h3>
+                            </div>
+                            <div class="planning-item column is-one-third">
+                                <div class="img-block"><a href=""><img src="img/planning-image.png" alt=""></a></div>
+                                <h3 class="title is-6"><a href="">2013年10月販促情報</a></h3>
+                            </div>
+                            <div class="planning-item column is-one-third">
+                                <div class="img-block"><a href=""><img src="img/planning-image.png" alt=""></a></div>
+                                <h3 class="title is-6"><a href="">2013年10月販促情報</a></h3>
+                            </div>
+                            <div class="planning-item column is-one-third">
+                                <div class="img-block"><a href=""><img src="img/planning-image.png" alt=""></a></div>
+                                <h3 class="title is-6"><a href="">2013年10月販促情報</a></h3>
+                            </div>
+                        </div>
+                        <button class="button column button-all is-light m-auto is-half">
+                            <span>販促情報一覧へ</span>
+                        </button>
+                    </section>
+                    <section class="products section">
+                        <div class="c-sectionh level">
+                            <div class="level-left">
+                                <div class="level-item">
+                                    <i class="c-sectionh_icon"><img src="img/icon-products.svg" /></i>
+                                </div>
+                                <div>
+                                    <h1 class="title">最新商品</h1>
+                                    <h2 class="subtitle is-6 has-text-primary">PRODUCTS</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products-items columns is-flex-wrap-wrap">
+                            <div class="products-item column is-one-third">
+                                <div class="img-block"><a href="#"><img src="img/products-image.png" alt=""></a></div>
+                                <div class="products-info">
+                                    <div>
+                                        <p class="products-name"><a href="#">商品名が入ります商品名が入ります</a></p>
+                                        <p class="brand-name">ブランド名</p>
+                                    </div>
+                                    <div class="price-info level-left">
+                                        <span class="is-size-7">上代価格</span>
+                                        <p class="price is-size-5">10,000<span class="is-size-7">円</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products-item column is-one-third">
+                                <div class="img-block"><a href="#"><img src="img/products-image.png" alt=""></a></div>
+                                <div class="products-info">
+                                    <div>
+                                        <p class="products-name"><a href="#">商品名が入ります商品名が入ります</a></p>
+                                        <p class="brand-name">ブランド名</p>
+                                    </div>
+                                    <div class="price-info level-left">
+                                        <span class="is-size-7">上代価格</span>
+                                        <p class="price is-size-5">10,000<span class="is-size-7">円</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products-item column is-one-third">
+                                <div class="img-block"><a href="#"><img src="img/products-image.png" alt=""></a></div>
+                                <div class="products-info">
+                                    <div>
+                                        <p class="products-name"><a href="#">商品名が入ります商品名が入ります</a></p>
+                                        <p class="brand-name">ブランド名</p>
+                                    </div>
+                                    <div class="price-info level-left">
+                                        <span class="is-size-7">上代価格</span>
+                                        <p class="price is-size-5">10,000<span class="is-size-7">円</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products-item column is-one-third">
+                                <div class="img-block"><a href="#"><img src="img/products-image.png" alt=""></a></div>
+                                <div class="products-info">
+                                    <div>
+                                        <p class="products-name"><a href="#">商品名が入ります商品名が入ります</a></p>
+                                        <p class="brand-name">ブランド名</p>
+                                    </div>
+                                    <div class="price-info level-left">
+                                        <span class="is-size-7">上代価格</span>
+                                        <p class="price is-size-5">10,000<span class="is-size-7">円</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products-item column is-one-third">
+                                <div class="img-block"><a href="#"><img src="img/products-image.png" alt=""></a></div>
+                                <div class="products-info">
+                                    <div>
+                                        <p class="products-name"><a href="#">商品名が入ります商品名が入ります</a></p>
+                                        <p class="brand-name">ブランド名</p>
+                                    </div>
+                                    <div class="price-info level-left">
+                                        <span class="is-size-7">上代価格</span>
+                                        <p class="price is-size-5">10,000<span class="is-size-7">円</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="products-item column is-one-third">
+                                <div class="img-block"><a href="#"><img src="img/products-image.png" alt=""></a></div>
+                                <div class="products-info">
+                                    <div>
+                                        <p class="products-name"><a href="#">商品名が入ります商品名が入ります</a></p>
+                                        <p class="brand-name">ブランド名</p>
+                                    </div>
+                                    <div class="price-info level-left">
+                                        <span class="is-size-7">上代価格</span>
+                                        <p class="price is-size-5">10,000<span class="is-size-7">円</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="button column button-all is-light m-auto is-half">
+                            <!--なぜかbuttonをis-primryにした時だけbackground-colorが上書きされないため、is-successで代用-->
+                            <span>商品一覧へ</span>
+                        </button>
+                    </section>
+                    <section class="interview section">
+                        <div class="mb-4">
+                            <a class="bottom-banner" href="">
+                                <!--aのhrefとimgのaltの設定お願いします-->
+                                <img src="img/bottom-banner.png" alt="">
+                            </a>
+                        </div>
+                        <div class="interview-items is-flex-wrap-wrap tile">
+                            <div class="interview-item tile is-parent is-3">
+                                <div class="tile is-child box">
+                                    <!--aのhrefとimgのaltの設定お願いします-->
+                                    <a href="">
+                                        <img src="img/interview-image.png" alt="">
+                                        <div class="interview-info">
+                                            <p class="corp-name">株式会社◯◯代表</p>
+                                            <p class="interview-name">山田太郎さん</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="interview-item tile is-parent is-3">
+                                <div class="tile is-child box">
+                                    <!--aのhrefとimgのaltの設定お願いします-->
+                                    <a href="">
+                                        <img src="img/interview-image.png" alt="">
+                                        <div class="interview-info">
+                                            <p class="corp-name">株式会社◯◯代表</p>
+                                            <p class="interview-name">山田太郎さん</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="interview-item tile is-parent is-3">
+                                <div class="tile is-child box">
+                                    <!--aのhrefとimgのaltの設定お願いします-->
+                                    <a href="">
+                                        <img src="img/interview-image.png" alt="">
+                                        <div class="interview-info">
+                                            <p class="corp-name">株式会社◯◯代表</p>
+                                            <p class="interview-name">山田太郎さん</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="interview-item tile is-parent is-3">
+                                <div class="tile is-child box">
+                                    <!--aのhrefとimgのaltの設定お願いします-->
+                                    <a href="">
+                                        <img src="img/interview-image.png" alt="">
+                                        <div class="interview-info">
+                                            <p class="corp-name">株式会社◯◯代表</p>
+                                            <p class="interview-name">山田太郎さん</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="interview-item tile is-parent is-3">
+                                <div class="tile is-child box">
+                                    <!--aのhrefとimgのaltの設定お願いします-->
+                                    <a href="">
+                                        <img src="img/interview-image.png" alt="">
+                                        <div class="interview-info">
+                                            <p class="corp-name">株式会社◯◯代表</p>
+                                            <p class="interview-name">山田太郎さん</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="interview-item tile is-parent is-3">
+                                <div class="tile is-child box">
+                                    <!--aのhrefとimgのaltの設定お願いします-->
+                                    <a href="">
+                                        <img src="img/interview-image.png" alt="">
+                                        <div class="interview-info">
+                                            <p class="corp-name">株式会社◯◯代表</p>
+                                            <p class="interview-name">山田太郎さん</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="interview-item tile is-parent is-3">
+                                <div class="tile is-child box">
+                                    <!--aのhrefとimgのaltの設定お願いします-->
+                                    <a href="">
+                                        <img src="img/interview-image.png" alt="">
+                                        <div class="interview-info">
+                                            <p class="corp-name">株式会社◯◯代表</p>
+                                            <p class="interview-name">山田太郎さん</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="interview-item tile is-parent is-3">
+                                <div class="tile is-child box">
+                                    <!--aのhrefとimgのaltの設定お願いします-->
+                                    <a href="">
+                                        <img src="img/interview-image.png" alt="">
+                                        <div class="interview-info">
+                                            <p class="corp-name">株式会社◯◯代表</p>
+                                            <p class="interview-name">山田太郎さん</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="sidebar column is-3">
+                    <section class="sidebar-images">
+                        <a href="">
+                            <img src="img/sidebar-image1.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="img/sidebar-image2.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="img/sidebar-image3.png" alt="">
+                        </a>
+                    </section>
+                    <section class="sidebar-menu-section section">
+                        <div class="control search-wrap">
+                            <input class="input" type="text" placeholder="サイト内を検索">
+                            <button type="submit"></button>
+                        </div>
+                        <div class="sidebar-menu menu">
+                            <div class="sidebar-menu-label menu-label">
+                                <img src="img/icon-menu.png">
+                                <span>コラムカテゴリー一覧</span>
+                            </div>
+                            <ul class="category-menu-list menu-list">
+                                <li><a href="#">経営者コラム</a></li>
+                                <li><a href="#">企画販促コラム</a></li>
+                                <li><a href="#">主催者コラム</a></li>
+                                <li><a href="#">特選品コラム</a></li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-menu menu">
+                            <div class="sidebar-menu-label menu-label">
+                                <img src="img/icon-shop.png">
+                                <span>加盟店一覧</span>
+                            </div>
+                            <ul class="sidebar-menu-list menu-list">
+                                <li class="sidebar-menu-label-second">
+                                    <p>北海道・東北</p>
+                                </li>
+                                <li><a href="#">サカイ</a></li>
+                            </ul>
+                            <ul class="sidebar-menu-list menu-list">
+                                <li class="sidebar-menu-label-second">
+                                    <p>関東</p>
+                                </li>
+                                <li><a href="#">シティメガネ城田</a></li>
+                                <li><a href="#">イナリヤ</a></li>
+                                <li><a href="#">メガネのセイコー（北習志野店）</a></li>
+                                <li><a href="#">銀美堂時計総本店</a></li>
+                            </ul>
+                            <ul class="sidebar-menu-list menu-list">
+                                <li class="sidebar-menu-label-second">
+                                    <p>中部</p>
+                                </li>
+                                <li><a href="#">キタオカ</a></li>
+                                <li><a href="#">ミヤコヤ（十日町市 妻有SC店）</a></li>
+                                <li><a href="#">マルイチ</a></li>
+                                <li><a href="#">ミヤコヤ（長岡市）</a></li>
+                            </ul>
+                            <ul class="sidebar-menu-list menu-list">
+                                <li class="sidebar-menu-label-second">
+                                    <p>関西</p>
+                                </li>
+                                <li><a href="#">プロショップツチヤ</a></li>
+                            </ul>
+                            <ul class="sidebar-menu-list menu-list">
+                                <li class="sidebar-menu-label-second">
+                                    <p>中国</p>
+                                </li>
+                                <li><a href="#">ナカダヤ</a></li>
+                                <li><a href="#">せと</a></li>
+                                <li><a href="#">コンドウ</a></li>
+                                <li><a href="#">めがね高島屋</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="sidebar-images">
+                        <a href="">
+                            <img src="img/sidebar-image4.png" alt="">
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="container is-max-widescreen">
+                <div class="columns">
+                    <div class="column">
+                        <div>
+                            眼鏡店専門ボラリティチェーン
+                        </div>
+                        <div>
+                            <a class="navbar-item" href="/">
+                                <img src="img/logo.png" alt="プライム21">
+                            </a>
+                        </div>
+                        <div>
+                            <i></i>
+                            047-496-3305
+                        </div>
                     </div>
-                    <div class="navbar-end">
-                        <div class="buttons">
-                            <button class="button is-dark">
+                    <div class="column is-align-items-center">
+                        <div>
+                            お問い合わせ・資料請求はこちら
+                        </div>
+                        <div class="buttons is-flex-direction-column">
+                            <button class="button">
                                 <span class="icon">
-                                <i class="fas fa-envelope"></i>
+                                    <i class="fab fa-github"></i>
                                 </span>
                                 <span>お問い合わせフォーム</span>
                             </button>
-                            <button class="button is-primary">
+                            <button class="button">
                                 <span class="icon">
-                                <i class="fas fa-file"></i>
+                                    <i class="fab fa-github"></i>
                                 </span>
                                 <span>無料で資料請求</span>
                             </button>
                         </div>
                     </div>
-                </div>
-                <div class="c_mainnav">
-                    <a href="/">
-                        <img src="img/gm1.svg"><span>ホーム</span>
-                    </a>
-                    <a href="about">
-                        <img src="img/gm2.svg"><span>プライム21とは</span>
-                    </a>
-                    <a href="event">
-                        <img src="img/gm3.svg"><span>展示会・イベント情報</span>
-                    </a>
-                    <a href="store">
-                        <img src="img/gm4.svg"><span>商品一覧</span>
-                    </a>
-                    <a href="column">
-                        <img src="img/gm5.svg"><span>コラム</span>
-                    </a>
-                    <a href="company">
-                        <img src="img/gm6.svg"><span>会社概要</span>
-                    </a>
-                </div>
-            </div>
-        </header>
-        <main>
-            <section class="main-slide">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/slide-sample.png" alt="sample"></div>
-                        <div class="swiper-slide"><img src="img/slide-sample.png" alt="sample"></div>
-                        <div class="swiper-slide"><img src="img/slide-sample.png" alt="sample"></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            </section>
-            <div class="container is-widescreen main-wrap">
-                <div class="columns">
-                    <div class="maincolumn column is-9">
-                        <section class="mb-5">
-                            <a class="top-banner" href="">
-                            <!--aのhrefとimgのaltの設定お願いします-->
-                                <img src="img/banner.png" alt="">
-                            </a>
-                        </section>
-                        <section calss="infomation section">
-                            <div class="c-sectionh level">
-                                <div class="level-left">
-                                    <div class="level-item">
-                                        <i class="c-sectionh_icon"><img src="img/icon-infomation.svg" /></i>
-                                    </div>
-                                    <div>
-                                        <h1 class="title">最新情報</h1>
-                                        <h2 class="subtitle is-6 has-text-primary">INFOMATION</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tabs is-boxed is-fullwidth">
-                            <!--CSSでtabsのwhite-spaceをnoneに、overflow-xをなくさないとスクロールになってしまう-->
-                                <ul class="info-category gap-1">
-                                    <li class="category-title is-active">
-                                    <!--cssでcategory-titleのpadding-bottomを0にする-->
-                                    <!--cssでhas-textのhoverをなくす-->
-                                        <a class="has-text-white has-background-primary">
-                                        <span>ニュース</span>
-                                        </a>
-                                    </li>
-                                    <li class="category-title">
-                                        <a class="has-text-primary-dark has-background-primary-light">
-                                        <span>カテゴリ1</span>
-                                        </a>
-                                    </li>
-                                    <li class="category-title">
-                                        <a class="has-text-primary-dark has-background-primary-light">
-                                        <span>カテゴリ2</span>
-                                        </a>
-                                    </li>
-                                    <li class="category-title">
-                                        <a class="has-text-primary-dark has-background-primary-light">
-                                        <span>カテゴリ3</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <div class="c-info_list">
-                                    <p><a href="#">ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。</a></p>
-                                    <div class="c-under_info level-left">
-                                        <span class="tag">
-                                            カテゴリ名
-                                        </span>
-                                        <p class="dete">2021.10.1 21:00</p>
-                                    </div>
-                                </div>
-                                <div class="c-info_list">
-                                    <p><a href="#">ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。</a></p>
-                                    <div class="c-under_info level-left">
-                                        <span class="tag">
-                                            カテゴリ名
-                                        </span>
-                                        <p class="dete">2021.10.1 21:00</p>
-                                    </div>
-                                </div>
-                                <div class="c-info_list">
-                                    <p><a href="#">ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。</a></p>
-                                    <div class="c-under_info level-left">
-                                        <span class="tag">
-                                            カテゴリ名
-                                        </span>
-                                        <p class="dete">2021.10.1 21:00</p>
-                                    </div>
-                                </div>
-                                <div class="c-info_list">
-                                    <p><a href="#">ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。ニュースタイトルが入ります。</a></p>
-                                    <div class="c-under_info level-left">
-                                        <span class="tag">
-                                            カテゴリ名
-                                        </span>
-                                        <p class="dete">2021.10.1 21:00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="article-list section">
-                            <div class="article-items columns is-flex-wrap-wrap">
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="img/article-image.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <span class="tag red">
-                                                NEW
-                                            </span>
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="img/article-image.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <span class="tag red">
-                                                NEW
-                                            </span>
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="img/article-image.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <span class="tag red">
-                                                NEW
-                                            </span>
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="img/article-image.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <span class="tag red">
-                                                NEW
-                                            </span>
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="img/article-image.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <span class="tag red">
-                                                NEW
-                                            </span>
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="img/article-image.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <span class="tag red">
-                                                NEW
-                                            </span>
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <button class="button column button-all is-light m-auto is-half">
-                                <span>コラム一覧へ</span>
-                            </button>
-                        </section>
-                        <section class="planning section">
-                            <div class="c-sectionh level">
-                                <div class="level-left">
-                                    <div class="level-item">
-                                        <i class="c-sectionh_icon"><img src="img/icon-planning.svg" /></i>
-                                    </div>
-                                    <div>
-                                        <h1 class="title">販促企画情報</h1>
-                                        <h2 class="subtitle is-6 has-text-primary">PLANNING</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="planning-items columns is-flex-wrap-wrap">
-                                <div class="planning-item column is-one-third">
-                                    <div class="img-block"><a href=""><img src="img/planning-image.png" alt=""></a></div>
-                                    <h3 class="title is-6"><a href="">2013年10月販促情報</a></h3>
-                                </div>
-                                <div class="planning-item column is-one-third">
-                                    <div class="img-block"><a href=""><img src="img/planning-image.png" alt=""></a></div>
-                                    <h3 class="title is-6"><a href="">2013年10月販促情報</a></h3>
-                                </div>
-                                <div class="planning-item column is-one-third">
-                                    <div class="img-block"><a href=""><img src="img/planning-image.png" alt=""></a></div>
-                                    <h3 class="title is-6"><a href="">2013年10月販促情報</a></h3>
-                                </div>
-                                <div class="planning-item column is-one-third">
-                                    <div class="img-block"><a href=""><img src="img/planning-image.png" alt=""></a></div>
-                                    <h3 class="title is-6"><a href="">2013年10月販促情報</a></h3>
-                                </div>
-                                <div class="planning-item column is-one-third">
-                                    <div class="img-block"><a href=""><img src="img/planning-image.png" alt=""></a></div>
-                                    <h3 class="title is-6"><a href="">2013年10月販促情報</a></h3>
-                                </div>
-                                <div class="planning-item column is-one-third">
-                                    <div class="img-block"><a href=""><img src="img/planning-image.png" alt=""></a></div>
-                                    <h3 class="title is-6"><a href="">2013年10月販促情報</a></h3>
-                                </div>
-                            </div>
-                            <button class="button column button-all is-light m-auto is-half">
-                                <span>販促情報一覧へ</span>
-                            </button>
-                        </section>
-                        <section class="products section">
-                            <div class="c-sectionh level">
-                                <div class="level-left">
-                                    <div class="level-item">
-                                        <i class="c-sectionh_icon"><img src="img/icon-products.svg" /></i>
-                                    </div>
-                                    <div>
-                                        <h1 class="title">最新商品</h1>
-                                        <h2 class="subtitle is-6 has-text-primary">PRODUCTS</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="products-items columns is-flex-wrap-wrap">
-                                <div class="products-item column is-one-third">
-                                    <div class="img-block"><a href="#"><img src="img/products-image.png" alt=""></a></div>
-                                    <div class="products-info">
-                                        <div>
-                                            <p class="products-name"><a href="#">商品名が入ります商品名が入ります</a></p>
-                                            <p class="brand-name">ブランド名</p>
-                                        </div>
-                                        <div class="price-info level-left">
-                                            <span class="is-size-7">上代価格</span>
-                                            <p class="price is-size-5">10,000<span class="is-size-7">円</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="products-item column is-one-third">
-                                    <div class="img-block"><a href="#"><img src="img/products-image.png" alt=""></a></div>
-                                    <div class="products-info">
-                                        <div>
-                                            <p class="products-name"><a href="#">商品名が入ります商品名が入ります</a></p>
-                                            <p class="brand-name">ブランド名</p>
-                                        </div>
-                                        <div class="price-info level-left">
-                                            <span class="is-size-7">上代価格</span>
-                                            <p class="price is-size-5">10,000<span class="is-size-7">円</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="products-item column is-one-third">
-                                    <div class="img-block"><a href="#"><img src="img/products-image.png" alt=""></a></div>
-                                    <div class="products-info">
-                                        <div>
-                                            <p class="products-name"><a href="#">商品名が入ります商品名が入ります</a></p>
-                                            <p class="brand-name">ブランド名</p>
-                                        </div>
-                                        <div class="price-info level-left">
-                                            <span class="is-size-7">上代価格</span>
-                                            <p class="price is-size-5">10,000<span class="is-size-7">円</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="products-item column is-one-third">
-                                    <div class="img-block"><a href="#"><img src="img/products-image.png" alt=""></a></div>
-                                    <div class="products-info">
-                                        <div>
-                                            <p class="products-name"><a href="#">商品名が入ります商品名が入ります</a></p>
-                                            <p class="brand-name">ブランド名</p>
-                                        </div>
-                                        <div class="price-info level-left">
-                                            <span class="is-size-7">上代価格</span>
-                                            <p class="price is-size-5">10,000<span class="is-size-7">円</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="products-item column is-one-third">
-                                    <div class="img-block"><a href="#"><img src="img/products-image.png" alt=""></a></div>
-                                    <div class="products-info">
-                                        <div>
-                                            <p class="products-name"><a href="#">商品名が入ります商品名が入ります</a></p>
-                                            <p class="brand-name">ブランド名</p>
-                                        </div>
-                                        <div class="price-info level-left">
-                                            <span class="is-size-7">上代価格</span>
-                                            <p class="price is-size-5">10,000<span class="is-size-7">円</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="products-item column is-one-third">
-                                    <div class="img-block"><a href="#"><img src="img/products-image.png" alt=""></a></div>
-                                    <div class="products-info">
-                                        <div>
-                                            <p class="products-name"><a href="#">商品名が入ります商品名が入ります</a></p>
-                                            <p class="brand-name">ブランド名</p>
-                                        </div>
-                                        <div class="price-info level-left">
-                                            <span class="is-size-7">上代価格</span>
-                                            <p class="price is-size-5">10,000<span class="is-size-7">円</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="button column button-all is-light m-auto is-half">
-                                <!--なぜかbuttonをis-primryにした時だけbackground-colorが上書きされないため、is-successで代用-->
-                                <span>商品一覧へ</span>
-                            </button>
-                        </section>
-                        <section class="interview section">
-                            <div class="mb-4">
-                                <a class="bottom-banner" href="">
-                                <!--aのhrefとimgのaltの設定お願いします-->
-                                    <img src="img/bottom-banner.png" alt="">
-                                </a>
-                            </div>
-                            <div class="interview-items is-flex-wrap-wrap tile">
-                                <div class="interview-item tile is-parent is-3">
-                                    <div class="tile is-child box">
-                                        <!--aのhrefとimgのaltの設定お願いします-->
-                                        <a href="">
-                                            <img src="img/interview-image.png" alt="">
-                                            <div class="interview-info">
-                                                <p class="corp-name">株式会社◯◯代表</p>
-                                                <p class="interview-name">山田太郎さん</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="interview-item tile is-parent is-3">
-                                    <div class="tile is-child box">
-                                        <!--aのhrefとimgのaltの設定お願いします-->
-                                        <a href="">
-                                            <img src="img/interview-image.png" alt="">
-                                            <div class="interview-info">
-                                                <p class="corp-name">株式会社◯◯代表</p>
-                                                <p class="interview-name">山田太郎さん</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="interview-item tile is-parent is-3">
-                                    <div class="tile is-child box">
-                                        <!--aのhrefとimgのaltの設定お願いします-->
-                                        <a href="">
-                                            <img src="img/interview-image.png" alt="">
-                                            <div class="interview-info">
-                                                <p class="corp-name">株式会社◯◯代表</p>
-                                                <p class="interview-name">山田太郎さん</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="interview-item tile is-parent is-3">
-                                    <div class="tile is-child box">
-                                        <!--aのhrefとimgのaltの設定お願いします-->
-                                        <a href="">
-                                            <img src="img/interview-image.png" alt="">
-                                            <div class="interview-info">
-                                                <p class="corp-name">株式会社◯◯代表</p>
-                                                <p class="interview-name">山田太郎さん</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="interview-item tile is-parent is-3">
-                                    <div class="tile is-child box">
-                                        <!--aのhrefとimgのaltの設定お願いします-->
-                                        <a href="">
-                                            <img src="img/interview-image.png" alt="">
-                                            <div class="interview-info">
-                                                <p class="corp-name">株式会社◯◯代表</p>
-                                                <p class="interview-name">山田太郎さん</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="interview-item tile is-parent is-3">
-                                    <div class="tile is-child box">
-                                        <!--aのhrefとimgのaltの設定お願いします-->
-                                        <a href="">
-                                            <img src="img/interview-image.png" alt="">
-                                            <div class="interview-info">
-                                                <p class="corp-name">株式会社◯◯代表</p>
-                                                <p class="interview-name">山田太郎さん</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="interview-item tile is-parent is-3">
-                                    <div class="tile is-child box">
-                                        <!--aのhrefとimgのaltの設定お願いします-->
-                                        <a href="">
-                                            <img src="img/interview-image.png" alt="">
-                                            <div class="interview-info">
-                                                <p class="corp-name">株式会社◯◯代表</p>
-                                                <p class="interview-name">山田太郎さん</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="interview-item tile is-parent is-3">
-                                    <div class="tile is-child box">
-                                        <!--aのhrefとimgのaltの設定お願いします-->
-                                        <a href="">
-                                            <img src="img/interview-image.png" alt="">
-                                            <div class="interview-info">
-                                                <p class="corp-name">株式会社◯◯代表</p>
-                                                <p class="interview-name">山田太郎さん</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="sidebar column is-3">
-                        <section class="sidebar-images">
-                            <a href="">
-                                <img src="img/sidebar-image1.png" alt="">
-                            </a>
-                            <a href="">
-                                <img src="img/sidebar-image2.png" alt="">
-                            </a>
-                            <a href="">
-                                <img src="img/sidebar-image3.png" alt="">
-                            </a>
-                        </section>
-                        <section class="sidebar-menu-section section">
-                            <div class="control search-wrap">
-                                <input class="input" type="text" placeholder="サイト内を検索">
-                                <button type="submit" ></button>
-                            </div>
-                            <div class="sidebar-menu menu">
-                                <div class="sidebar-menu-label menu-label">
-                                    <img src="img/icon-menu.png">
-                                <span>コラムカテゴリー一覧</span>
-                                </div>
-                                <ul class="category-menu-list menu-list">
-                                    <li><a href="#">経営者コラム</a></li>
-                                    <li><a href="#">企画販促コラム</a></li>
-                                    <li><a href="#">主催者コラム</a></li>
-                                    <li><a href="#">特選品コラム</a></li>
-                                </ul>
-                            </div>
-                            <div class="sidebar-menu menu">
-                                <div class="sidebar-menu-label menu-label">
-                                    <img src="img/icon-shop.png">
-                                <span>加盟店一覧</span>
-                                </div>
-                                <ul class="sidebar-menu-list menu-list">
-                                    <li class="sidebar-menu-label-second">
-                                        <p>北海道・東北</p>
-                                    </li>
-                                    <li><a href="#">サカイ</a></li>
-                                </ul>
-                                <ul class="sidebar-menu-list menu-list">
-                                    <li class="sidebar-menu-label-second">
-                                        <p>関東</p>
-                                    </li>
-                                    <li><a href="#">シティメガネ城田</a></li>
-                                    <li><a href="#">イナリヤ</a></li>
-                                    <li><a href="#">メガネのセイコー（北習志野店）</a></li>
-                                    <li><a href="#">銀美堂時計総本店</a></li>
-                                </ul>
-                                <ul class="sidebar-menu-list menu-list">
-                                    <li class="sidebar-menu-label-second">
-                                        <p>中部</p>
-                                    </li>
-                                    <li><a href="#">キタオカ</a></li>
-                                    <li><a href="#">ミヤコヤ（十日町市 妻有SC店）</a></li>
-                                    <li><a href="#">マルイチ</a></li>
-                                    <li><a href="#">ミヤコヤ（長岡市）</a></li>
-                                </ul>
-                                <ul class="sidebar-menu-list menu-list">
-                                    <li class="sidebar-menu-label-second">
-                                        <p>関西</p>
-                                    </li>
-                                    <li><a href="#">プロショップツチヤ</a></li>
-                                </ul>
-                                <ul class="sidebar-menu-list menu-list">
-                                    <li class="sidebar-menu-label-second">
-                                        <p>中国</p>
-                                    </li>
-                                    <li><a href="#">ナカダヤ</a></li>
-                                    <li><a href="#">せと</a></li>
-                                    <li><a href="#">コンドウ</a></li>
-                                    <li><a href="#">めがね高島屋</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section class="sidebar-images">
-                            <a href="">
-                                <img src="img/sidebar-image4.png" alt="">
-                            </a>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <div class="footer">
-                <div class="container is-max-widescreen">
                     <div class="columns">
-                        <div class="column">
-                            <div>
-                                眼鏡店専門ボラリティチェーン
-                            </div>
-                            <div>
-                                <a class="navbar-item" href="/">
-                                    <img src="img/logo.png" alt="プライム21">
-                                </a>
-                            </div>
-                            <div>
-                                <i></i>
-                                047-496-3305
-                            </div>
-                        </div>
-                        <div class="column is-align-items-center">
-                            <div>
-                                お問い合わせ・資料請求はこちら
-                            </div>
-                            <div class="buttons is-flex-direction-column">
-                                <button class="button">
-                                    <span class="icon">
-                                    <i class="fab fa-github"></i>
-                                    </span>
-                                    <span>お問い合わせフォーム</span>
-                                </button>
-                                <button class="button">
-                                    <span class="icon">
-                                    <i class="fab fa-github"></i>
-                                    </span>
-                                    <span>無料で資料請求</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="columns">
-                            <ul class="menu column">
-                                <li>
-                                    <a href="" class="menu-label">
-                                        ホーム
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="menu-label">
-                                        プライム21とは
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="menu-label">
-                                        展示会・イベント情報
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="menu-label">
-                                        商品一覧
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul class="menu column">
+                        <ul class="menu column">
+                            <li>
                                 <a href="" class="menu-label">
-                                    コラム
+                                    ホーム
                                 </a>
-                                <li>
-                                    <a href="" class="menu-list">
-                                        経営者コラム
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="menu-list">
-                                        企画販促コラム
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="menu-list">
-                                        主催者コラム
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="menu-list">
-                                        特選品コラム
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul class="menu column">
-                                <li>
-                                    <a href="" class="menu-label">
-                                        経営者診断
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="menu-label">
-                                        会社概要
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                            </li>
+                            <li>
+                                <a href="" class="menu-label">
+                                    プライム21とは
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="menu-label">
+                                    展示会・イベント情報
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="menu-label">
+                                    商品一覧
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu column">
+                            <a href="" class="menu-label">
+                                コラム
+                            </a>
+                            <li>
+                                <a href="" class="menu-list">
+                                    経営者コラム
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="menu-list">
+                                    企画販促コラム
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="menu-list">
+                                    主催者コラム
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="menu-list">
+                                    特選品コラム
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu column">
+                            <li>
+                                <a href="" class="menu-label">
+                                    経営者診断
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="menu-label">
+                                    会社概要
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="container is-max-widescreen">
-                <ul class="columns is-justify-content-space-between">
-                    <li class="column">
-                        <a href="">
-                            プライバシーポリシー
-                        </a>
-                    </li>
-                    <li class="column">
-                        <a href="">
-                            特定商取引法に関する表示
-                        </a>
-                    </li>
-                </ul>
-                <p>
-                    Copyright © prime21 All rights reserved.
-                </p>
-            </div>
-        </footer>
-        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-        <script type="module">
-            import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
+        </div>
+        <div class="container is-max-widescreen">
+            <ul class="columns is-justify-content-space-between">
+                <li class="column">
+                    <a href="">
+                        プライバシーポリシー
+                    </a>
+                </li>
+                <li class="column">
+                    <a href="">
+                        特定商取引法に関する表示
+                    </a>
+                </li>
+            </ul>
+            <p>
+                Copyright © prime21 All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
 
-            var swiper = new Swiper ('.swiper', {
-                centeredSlides: true,
-                slidesPerView: 1.8,
-                spaceBetween: 16,
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            });
-        </script>
-    </body>
+        var swiper = new Swiper('.swiper', {
+            centeredSlides: true,
+            slidesPerView: 1.8,
+            spaceBetween: 16,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
 </html>

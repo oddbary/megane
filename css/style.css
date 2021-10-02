@@ -106,6 +106,9 @@ p{
 }
 
 /* header */
+header{
+  background: #fff;
+}
 .c_mainnav{
   display: flex;
   border-right: 1px solid #eee;
@@ -123,6 +126,216 @@ p{
 }
 .c_mainnav img{
   margin-right: 5px;
+}
+.clone-nav {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  transition: all .5s;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+  z-index: 111;
+  width: 100%;
+  padding: 12px 0;
+}
+.clone-nav.is-fixed-nav {
+  top: 0;
+  z-index: 111;
+}
+.c_mainnav,
+.navbar,
+.header-top{
+  display: none !important;
+}
+.navbar .button{
+  font-size: 13px;
+}
+@media screen and (min-width: 769px){
+  .navbar-brand{
+    align-items: stretch;
+    display: flex;
+    flex-shrink: 0;
+    min-height: 3.25rem;
+  }
+  .navbar, .navbar-end, .navbar-menu, .navbar-start, .header-top, .c_mainnav {
+    align-items: stretch;
+    display: flex !important;
+  }
+  .navbar-end {
+    align-items: stretch;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+  .c_mainnav,
+  .navbar{
+    display: flex;
+  }
+}
+.sp-header,
+.sp-nav,
+.sp-header,
+#hamburger{
+  display: none;
+}
+@media screen and (max-width: 768px){ /* スマホの場合 */
+  .sp-header{
+    display: block;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    background: #fff;
+    z-index: 111;
+    box-shadow: 0 0 10px rgba(0,0,0,.1)
+  }
+  .navbar-item{
+    justify-content: center;
+    padding: 12px 0;
+  }
+  .sp-header img{
+    height: 28px;
+  }
+  .sp-header{
+    text-align: center;
+  }
+  .navbar-item{
+    display: inline-block !important;
+  }
+  main{
+    margin-top: 52px;
+  }
+  #hamburger {
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 22px;
+    margin: 0 0 0 auto;
+    right: 10px;
+    top: 16px;
+    cursor: pointer;
+ }
+  #hamburger span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #00A043;
+    transform: translateY(-50%);
+  }
+  #hamburger::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00A043;
+ }
+ #hamburger::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 2px;
+    background-color: #00A043;
+ }
+ .sp-nav {
+    z-index: 111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    width: 100%;
+    background: #00a043f5;
+    transition: all .4s ease-in-out;
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  .sp-nav.active{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  .sp-nav-ineer {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+ }
+ .sp-nav-ineer ul{
+   width: 100%;
+ }
+ .sp-nav li {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+ }
+ .sp-nav li:not(:last-child){
+  border-bottom: 1px solid rgba(255,255,255,0.2)
+ }
+ .sp-nav li span {
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+ }
+ .sp-nav li a, .sp-nav li span {
+    display: block;
+    padding: 7px 0;
+ }
+ .sp-nav .close {
+  margin-top: 30px;
+  cursor: pointer;
+  font-family: brandon-grotesque, sans-serif;
+ }
+ .sp-nav .close span{
+    font-size: 14px;
+    color: #fff;
+ }
+ /*基準となるli要素*/
+  .sp-nav .close {
+    position: relative;
+    padding-left: 20px;
+  }
+  /*バツ印線1*/
+  .sp-nav .close::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: #fff;
+    transform: rotate( 45deg );
+  }
+  /*バツ印線2*/
+  .sp-nav .close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: #fff;
+    transform: rotate( -45deg );
+  }
+}
+
+@media screen and (max-width: 1070px){
+  .c_mainnav a{
+    flex-basis:auto
+  }
 }
 .tabs{
   margin-bottom: 0 !important;
