@@ -70,6 +70,15 @@ a.has-text-primary:hover{
   gap: 0 8px;
 }
 
+p{
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+}
+.title{
+  letter-spacing: 0.04em;
+}
+
 /* header */
 .c_mainnav{
   display: flex;
@@ -334,4 +343,30 @@ a.has-text-primary:hover{
   width: 100%;
   height: 0;
   border-bottom: 1px solid #eee;
+}
+.philosophy-list{
+  border: 3px solid #eee; 
+}
+.philosophy-list .title{
+  margin-bottom: 8px;
+}
+.philosophy-list li{
+  padding: 24px;
+}
+.philosophy-list li:not(:last-child){
+  border-bottom: 1px solid #eee;
+}
+.appeal-text{
+  text-align: center;
+}
+.appeal-item-title.title{
+  margin-bottom: 8px;
+  font-size: 27px;
+}
+.appeal-item-title span{
+  font-family: brandon-grotesque, sans-serif;
+  margin-right: 8px;
+}
+.appeal-item:not(:last-child){
+  margin-bottom: 40px;
 }
