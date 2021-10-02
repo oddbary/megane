@@ -319,7 +319,7 @@ p{
 }
 @media screen and (min-width: 1216px){
   .sidebar{
-    min-width: 324px;
+    min-width: 300px;
     padding: 0;
   }
 }
@@ -359,6 +359,20 @@ p{
   height: 214px;
   max-width: auto;
   width: 100%;
+}
+
+.main-wrap{
+  padding-top: 43px;
+}
+.main-wrap .columns{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* sidebar */
+.sidebar-images a{
+  display: block;
+  margin-bottom: 16px;
 }
 
 /* subpage */
@@ -414,7 +428,7 @@ p{
 
 .page-title{
   text-align: center;
-  padding-top: 54px;
+  padding-top: 0;
 }
 .page-title h1::after{
   content: "";
