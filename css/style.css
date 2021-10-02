@@ -335,6 +335,32 @@ p{
   }
 }
 
+.article-image-wrap{
+  margin-bottom: 8px;
+  overflow: hidden;
+  position: relative;
+  height: 214px;
+}
+.article-category-label{
+  background: #00A043;
+  color: #fff;
+  padding: 6px 8px;
+  font-weight: bold;
+  line-height: 1em;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  bottom: 10px;
+  left :0;
+  position: absolute;
+}
+.article-image-wrap img{
+  object-fit: cover;
+  border-radius: 8px;
+  height: 214px;
+  max-width: auto;
+  width: 100%;
+}
+
 /* subpage */
 
 .sub-title1{
