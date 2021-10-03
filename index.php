@@ -1,6 +1,6 @@
 <?php $title = "";?>
 <?php
-include('/header.php');
+include('header.php');
 ?>
 <main>
         <section class="main-slide">
