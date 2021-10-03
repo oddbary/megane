@@ -661,6 +661,9 @@ footer .navbar{
   width: 100%;
 }
 
+main{
+  overflow: hidden;
+}
 .main-wrap{
   padding-top: 40px;
   padding-bottom: 40px;
@@ -1188,6 +1191,7 @@ input[type=radio]:checked + span::before {
 }
 .dignosis-results{
   background: #00A043;
+  margin-top: 0;
 }
 .dignosis-results-inner{
   font-weight: bold;
@@ -1264,4 +1268,12 @@ input[type=radio]:checked + span::before {
   max-width: 200px;
   font-size: 15px;
   margin:0 auto;
+}
+@media screen and (max-width: 768px){
+  .dignosis-results-top .title{
+    font-size: 28px;
+  }
+  .dignosis-results-top .subtitle{
+    font-size: 16px;
+  }
 }
