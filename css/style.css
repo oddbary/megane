@@ -611,8 +611,7 @@ header .navbar,
 }
 @media screen and (min-width: 1216px){
   .maincolumn{
-    margin-right: 40px;
-    padding: 0;
+    padding-right: 40px;
   }
 }
 @media screen and (min-width: 1216px){
@@ -665,6 +664,7 @@ header .navbar,
 .main-wrap .columns{
   margin-top: 0;
   margin-bottom: 0;
+  justify-content: center;
 }
 
 /* sidebar */
