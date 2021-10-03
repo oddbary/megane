@@ -659,7 +659,8 @@ header .navbar,
 }
 
 .main-wrap{
-  padding-top: 43px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .main-wrap .columns{
   margin-top: 0;
