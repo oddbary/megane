@@ -166,6 +166,9 @@ header .navbar,
 .header-top{
   display: none !important;
 }
+footer .navbar{
+  background: transparent;
+}
 .navbar .button{
   font-size: 13px;
 }
