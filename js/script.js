@@ -35,15 +35,17 @@ function fixedGlobalNav() {
 }
 window.addEventListener('scroll', fixedGlobalNav);
 
-var nav = document.getElementById('sp-nav');
-var hamburger = document.getElementById('hamburger');
-var close = document.getElementById('close');
+window.onload = function () {
+  var nav = document.getElementById('sp-nav');
+  var hamburger = document.getElementById('hamburger');
+  var close = document.getElementById('close');
 
-hamburger.addEventListener('click', function() {
-  hamburger.classList.toggle('active');
-  nav.classList.toggle('active');
-});
-close.addEventListener('click', function() {
-  hamburger.classList.remove('active');
-  nav.classList.remove('active');
-});
+  hamburger.addEventListener('click', function () {
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+  close.addEventListener('click', function () {
+    hamburger.classList.remove('active');
+    nav.classList.remove('active');
+  });
+}
