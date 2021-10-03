@@ -665,6 +665,12 @@ footer .navbar{
   padding-top: 40px;
   padding-bottom: 40px;
 }
+@media screen and (max-width: 768px){
+  .main-wrap{
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
 .main-wrap .columns{
   margin-top: 0;
   margin-bottom: 0;
