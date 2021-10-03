@@ -1,6 +1,4 @@
-<?php
-define("title" ,"プライム21");
-?>
+<?php $title = "";?>
 <?php
 include('/header.php');
 ?>

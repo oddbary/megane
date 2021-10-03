@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo title; ?></title>
+    <title><?php echo $title; ?>プライム21 │ 販促と企画のプロ集団！眼鏡専門店のネットワークグループ</title>
+    <meta name="description" content="販促と企画のプロ集団！眼鏡専門店のネットワークグループ プライム21のウェブサイトです。" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
