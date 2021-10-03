@@ -82,45 +82,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            /**
-             * グローバルナビのクローンを生成
-             */
-            function setCloneNav() {
-                var body = document.body;
-                var globalNav = document.getElementById('global-nav');
-
-                if (!globalNav) return;
-
-                var cloneNav = globalNav.cloneNode(true);
-                cloneNav.id = 'js-clone-nav';
-                cloneNav.classList.add('clone-nav');
-
-                body.insertBefore(cloneNav, body.firstChild);
-            }
-            setCloneNav();
-
-            /**
-             * グローバルナビのクローンをページ上部に移動・固定
-             */
-            function fixedGlobalNav() {
-                var scrollY = window.pageYOffset;
-                var trigger = document.getElementById('js-trigger');
-                var cloneNav = document.getElementById('js-clone-nav');
-
-                if (!cloneNav || !trigger) return;
-
-                var triggerClientRect = trigger.getBoundingClientRect();
-                var triggerY = scrollY + triggerClientRect.top;
-                if (scrollY > triggerY) {
-                    cloneNav.classList.add('is-fixed-nav');
-                } else {
-                    cloneNav.classList.remove('is-fixed-nav');
-                }
-            }
-            window.addEventListener('scroll', fixedGlobalNav);
-        </script>
-
         <div class="sp-header navbar-brand">
             <a class="navbar-item" href="/">
                 <img src="/img/logo.png" alt="プライム21">
@@ -192,7 +153,7 @@
         </section>
         <main class="container is-fullhd" id="js-trigger">
             <div class="container is-widescreen main-wrap">
-                <div class="columns is-variable is-8 is-flex-wrap-wrap">
+                <div class="columns">
                     <div class="maincolumn column">
                         <section class="product-top section">
                             <div class="page-top">
