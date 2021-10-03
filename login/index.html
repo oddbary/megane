@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/ba68847ce1.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="pt-4 pb-4">
         <div class="container is-widescreen">
@@ -170,50 +171,176 @@
             var nav = document.getElementById('sp-nav');
             var hamburger = document.getElementById('hamburger');
             var close = document.getElementById('close');
-           
-            hamburger.addEventListener('click', function() {
-              hamburger.classList.toggle('active');
-              nav.classList.toggle('active');
+
+            hamburger.addEventListener('click', function () {
+                hamburger.classList.toggle('active');
+                nav.classList.toggle('active');
             });
-            close.addEventListener('click', function() {
-              hamburger.classList.remove('active');
-              nav.classList.remove('active');
+            close.addEventListener('click', function () {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
             });
         </script>
     </header>
-        <main class="container is-fullhd">
-            <div class="container is-max-widescreen">
+    <main class="container is-fullhd">
+        <div class="container is-max-widescreen">
+            <div class="columns is-variable is-8">
+                <div class="column">
+                    <section class="login section">
+                        <div class="login-title">
+                            <h4 class="title is-4">ログイン</h4>
+                        </div>
+                        <div class="field">
+                            <label class="label">メールアドレス</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="メールアドレスを入力">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">パスワード</label>
+                            <div class="control">
+                                <input class="input" type="password" placeholder="パスワードを入力">
+                            </div>
+                        </div>
+                        <div class="admin-button-wrap">
+                            <button class="button is-primary"><a href="/mypage">ログイン</a></button>
+                            <div>
+                                <a href="#">アカウントを作成</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+    </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="container is-widescreen">
                 <div class="columns is-variable is-8">
-                    <div class="column">
-                        <section class="login section">
-                            <div class="login-title">
-                                <h4 class="title is-4">ログイン</h4>
-                            </div>
-                            <div class="field">
-                                <label class="label">メールアドレス</label>
-                                <div class="control">
-                                    <input class="input" type="text" placeholder="メールアドレスを入力">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">パスワード</label>
-                                <div class="control">
-                                    <input class="input" type="password" placeholder="パスワードを入力">
-                                </div>
-                            </div>
-                            <div class="admin-button-wrap">
-                                <button class="button is-primary"><a href="/mypage">ログイン</a></button>
-                                <div>
-                                    <a href="#">アカウントを作成</a>
-                                </div>
-                            </div>
-                        </section>
+                    <div class="column is-3 footer-info">
+                        <div class="is-size-7">
+                            眼鏡店専門ボラリティチェーン
+                        </div>
+                        <div>
+                            <a class="navbar-item" href="/">
+                                <img src="/img/logo.png" alt="プライム21">
+                            </a>
+                        </div>
+                        <div class="footer-phone">
+                            <i class="fas fa-phone"></i>
+                            047-496-3305
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class="is-size-7 has-text-weight-bold has-text-grey has-text-centered mb-2">
+                            お問い合わせ・資料請求はこちら
+                        </div>
+                        <div class="buttons">
+                            <button class="button is-dark is-small is-fullwidth">
+                                <a href="#">
+                                    <span class="icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                    <span>お問い合わせフォーム</span>
+                                </a>
+                            </button>
+                            <button class="button is-primary is-small is-fullwidth">
+                                <a href="#">
+                                    <span class="icon">
+                                        <i class="fas fa-file"></i>
+                                    </span>
+                                    <span>無料で資料請求</span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="column is-5">
+                        <div class="columns footer-menu">
+                            <ul class="menu column is-5">
+                                <li>
+                                    <a href="/" class="menu-label">
+                                        ホーム
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/about" class="menu-label">
+                                        プライム21とは
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/planning" class="menu-label">
+                                        展示会・イベント情報
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/product" class="menu-label">
+                                        商品一覧
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="menu column is-4">
+                                <a href="/column" class="menu-label">
+                                    コラム
+                                </a>
+                                <li>
+                                    <a href="/column/column-detail/" class="menu-list">
+                                        経営者コラム
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/column/column-detail/" class="menu-list">
+                                        企画販促コラム
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/column/column-detail/" class="menu-list">
+                                        主催者コラム
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/column/column-detail/" class="menu-list">
+                                        特選品コラム
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="menu column is-3">
+                                <li>
+                                    <a href="/diagnosis/" class="menu-label">
+                                        経営者診断
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/company/" class="menu-label">
+                                        会社概要
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </main>
-        <footer>
+        </div>
+        <div class="container is-widescreen navbar footer-bottom">
+            <ul class="navbar-start">
+                <li class="navbar-item">
+                    <a class="is-size-7 has-text-grey" href="#">
+                        プライバシーポリシー
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a class="is-size-7 has-text-grey" href="#">
+                        特定商取引法に関する表示
+                    </a>
+                </li>
+            </ul>
+            <p class="is-size-7 has-text-grey navbar-end navbar-item">
+                Copyright © prime21 All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
 
-        </footer>
-    </body>
 </html>

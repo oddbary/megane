@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="https://use.typekit.net/rrg6pdr.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/ba68847ce1.js" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
 </head>
+
 <body>
     <header class="pt-4 pb-4">
         <div class="container is-widescreen">
@@ -82,45 +84,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            /**
-             * グローバルナビのクローンを生成
-             */
-            function setCloneNav() {
-                var body = document.body;
-                var globalNav = document.getElementById('global-nav');
-
-                if (!globalNav) return;
-
-                var cloneNav = globalNav.cloneNode(true);
-                cloneNav.id = 'js-clone-nav';
-                cloneNav.classList.add('clone-nav');
-
-                body.insertBefore(cloneNav, body.firstChild);
-            }
-            setCloneNav();
-
-            /**
-             * グローバルナビのクローンをページ上部に移動・固定
-             */
-            function fixedGlobalNav() {
-                var scrollY = window.pageYOffset;
-                var trigger = document.getElementById('js-trigger');
-                var cloneNav = document.getElementById('js-clone-nav');
-
-                if (!cloneNav || !trigger) return;
-
-                var triggerClientRect = trigger.getBoundingClientRect();
-                var triggerY = scrollY + triggerClientRect.top;
-                if (scrollY > triggerY) {
-                    cloneNav.classList.add('is-fixed-nav');
-                } else {
-                    cloneNav.classList.remove('is-fixed-nav');
-                }
-            }
-            window.addEventListener('scroll', fixedGlobalNav);
-        </script>
-
         <div class="sp-header navbar-brand">
             <a class="navbar-item" href="/">
                 <img src="/img/logo.png" alt="プライム21">
@@ -166,404 +129,572 @@
                 <div id="close" class="close"><span>CLOSE</span></div>
             </div>
         </nav>
-        <script>
-            var nav = document.getElementById('sp-nav');
-            var hamburger = document.getElementById('hamburger');
-            var close = document.getElementById('close');
-           
-            hamburger.addEventListener('click', function() {
-              hamburger.classList.toggle('active');
-              nav.classList.toggle('active');
-            });
-            close.addEventListener('click', function() {
-              hamburger.classList.remove('active');
-              nav.classList.remove('active');
-            });
-        </script>
     </header>
-        <section class="breadcrumb-wrap section">
-            <nav class="container is-widescreen breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
-                <ul>
-                    <li><a href="/">ホーム</a></li>
-                    <li class="is-active"><a href="#" aria-current="page">コラム一覧</a></li>
-                </ul>
-            </nav>
-        </section>
-        <main class="container is-fullhd" id="js-trigger">
-            <div class="container is-widescreen main-wrap">
-                <div class="columns is-variable is-8 is-flex-wrap-wrap">
-                    <div class="maincolumn column">
-                        <section class="page-title section">
-                            <h1 class="title is2">コラム一覧</h1>
-                            <p>コラム一覧を掲載しています。コラム一覧を掲載しています。コラム一覧を掲載しています。コラム一覧を掲載しています。コラム一覧を掲載しています。コラム一覧を掲載しています。コラム一覧を掲載しています。</p>
-                        </section>
-                        <section class="article section">
-                            <div class="article-items columns is-flex-wrap-wrap">
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image01.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <span class="tag">
-                                                NEW
-                                            </span>
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image02.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <span class="tag">
-                                                NEW
-                                            </span>
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image03.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image04.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image05.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image06.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image01.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image02.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image03.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image04.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image05.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image06.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image01.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image02.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image03.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image04.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image05.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image06.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image01.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image02.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image03.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image04.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image05.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="article-item column is-half">
-                                    <a href="">
-                                        <div class="article-image-wrap">
-                                            <img src="../img/article-image06.png" alt="">
-                                            <span class="article-category-label">経営者コラム</span>
-                                        </div>
-                                        <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
-                                        <div class="under-article level-left">
-                                            <p class="dete">2020.11.3</p>
-                                        </div>
-                                    </a>
-                                </div>
+    <section class="breadcrumb-wrap section">
+        <nav class="container is-widescreen breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li class="is-active"><a href="#" aria-current="page">コラム一覧</a></li>
+            </ul>
+        </nav>
+    </section>
+    <main class="container is-fullhd" id="js-trigger">
+        <div class="container is-widescreen main-wrap">
+            <div class="columns">
+                <div class="maincolumn column">
+                    <section class="page-title section">
+                        <h1 class="title is2">コラム一覧</h1>
+                        <p>コラム一覧を掲載しています。コラム一覧を掲載しています。コラム一覧を掲載しています。コラム一覧を掲載しています。コラム一覧を掲載しています。コラム一覧を掲載しています。コラム一覧を掲載しています。
+                        </p>
+                    </section>
+                    <section class="article section">
+                        <div class="article-items columns is-flex-wrap-wrap">
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image01.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <span class="tag">
+                                            NEW
+                                        </span>
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
                             </div>
-                        </section>
-                        <section class="under-pagination section">
-                            <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-                                <ul class="pagination-list">
-                                    <li>
-                                        <a class="pagination-previous">＜</a>
-                                    </li>
-                                    <li>
-                                        <a class="pagination-link" aria-label="Goto page 1">1</a>
-                                    </li>
-                                    <li>
-                                        <span class="pagination-ellipsis">&hellip;</span>
-                                    </li>
-                                    <li>
-                                        <a class="pagination-link" aria-label="Goto page 4">4</a>
-                                    </li>
-                                    <li>
-                                        <a class="pagination-link" aria-label="Goto page 5">5</a>
-                                    </li>
-                                    <li>
-                                        <a class="pagination-link is-current" aria-label="Page 6" aria-current="page">6</a>
-                                    </li>
-                                    <li>
-                                        <a class="pagination-link" aria-label="Goto page 7">7</a>
-                                    </li>
-                                    <li>
-                                        <a class="pagination-link" aria-label="Goto page 8">8</a>
-                                    </li>
-                                    <li>
-                                        <span class="pagination-ellipsis">&hellip;</span>
-                                    </li>
-                                    <li>
-                                        <a class="pagination-link" aria-label="Goto page 12">12</a>
-                                    </li>
-                                    <li>
-                                        <a class="pagination-next">＞</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </section>
-                    </div>
-                    <div class="sidebar column is-3">
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image02.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <span class="tag">
+                                            NEW
+                                        </span>
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image03.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image04.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image05.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
 
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image06.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image01.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image02.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image03.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image04.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image05.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image06.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image01.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image02.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image03.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image04.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image05.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image06.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image01.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image02.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image03.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image04.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image05.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-item column is-half">
+                                <a href="">
+                                    <div class="article-image-wrap">
+                                        <img src="../img/article-image06.png" alt="">
+                                        <span class="article-category-label">経営者コラム</span>
+                                    </div>
+                                    <h3 class="title is-6">コラムのタイトルが入ります。コラムのタイトルが入ります。コラムのタイトルが入</h3>
+                                    <div class="under-article level-left">
+                                        <p class="dete">2020.11.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="under-pagination section">
+                        <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+                            <ul class="pagination-list">
+                                <li>
+                                    <a class="pagination-previous">＜</a>
+                                </li>
+                                <li>
+                                    <a class="pagination-link" aria-label="Goto page 1">1</a>
+                                </li>
+                                <li>
+                                    <span class="pagination-ellipsis">&hellip;</span>
+                                </li>
+                                <li>
+                                    <a class="pagination-link" aria-label="Goto page 4">4</a>
+                                </li>
+                                <li>
+                                    <a class="pagination-link" aria-label="Goto page 5">5</a>
+                                </li>
+                                <li>
+                                    <a class="pagination-link is-current" aria-label="Page 6" aria-current="page">6</a>
+                                </li>
+                                <li>
+                                    <a class="pagination-link" aria-label="Goto page 7">7</a>
+                                </li>
+                                <li>
+                                    <a class="pagination-link" aria-label="Goto page 8">8</a>
+                                </li>
+                                <li>
+                                    <span class="pagination-ellipsis">&hellip;</span>
+                                </li>
+                                <li>
+                                    <a class="pagination-link" aria-label="Goto page 12">12</a>
+                                </li>
+                                <li>
+                                    <a class="pagination-next">＞</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </section>
+                </div>
+                <div class="sidebar column is-3">
+                    <section class="sidebar-images">
+                        <a href="/planning">
+                            <img src="/img/sidebar-image1.png" alt="">
+                        </a>
+                        <a href="/about">
+                            <img src="/img/sidebar-image2.png" alt="">
+                        </a>
+                        <a href="/about">
+                            <img src="/img/sidebar-image3.png" alt="">
+                        </a>
+                    </section>
+                    <section class="sidebar-menu-section section">
+                        <div class="control search-wrap">
+                            <input class="input" type="text" placeholder="サイト内を検索">
+                            <button type="submit"></button>
+                        </div>
+                        <div class="sidebar-menu menu">
+                            <div class="sidebar-menu-label menu-label">
+                                <img src="/img/icon-menu.png">
+                                <span>コラムカテゴリー一覧</span>
+                            </div>
+                            <ul class="category-menu-list menu-list">
+                                <li><a href="/column">経営者コラム</a></li>
+                                <li><a href="/column">企画販促コラム</a></li>
+                                <li><a href="/column">主催者コラム</a></li>
+                                <li><a href="/column">特選品コラム</a></li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-menu menu">
+                            <div class="sidebar-menu-label menu-label">
+                                <img src="/img/icon-shop.png">
+                                <span>加盟店一覧</span>
+                            </div>
+                            <ul class="sidebar-menu-list menu-list">
+                                <li class="sidebar-menu-label-second">
+                                    <p>北海道・東北</p>
+                                </li>
+                                <li><a href="/about/company-detail/">サカイ</a></li>
+                            </ul>
+                            <ul class="sidebar-menu-list menu-list">
+                                <li class="sidebar-menu-label-second">
+                                    <p>関東</p>
+                                </li>
+                                <li><a href="/about/company-detail/">シティメガネ城田</a></li>
+                                <li><a href="/about/company-detail/">イナリヤ</a></li>
+                                <li><a href="/about/company-detail/">メガネのセイコー（北習志野店）</a></li>
+                                <li><a href="/about/company-detail/">銀美堂時計総本店</a></li>
+                            </ul>
+                            <ul class="sidebar-menu-list menu-list">
+                                <li class="sidebar-menu-label-second">
+                                    <p>中部</p>
+                                </li>
+                                <li><a href="/about/company-detail/">キタオカ</a></li>
+                                <li><a href="/about/company-detail/">ミヤコヤ（十日町市 妻有SC店）</a></li>
+                                <li><a href="/about/company-detail/">マルイチ</a></li>
+                                <li><a href="/about/company-detail/">ミヤコヤ（長岡市）</a></li>
+                            </ul>
+                            <ul class="sidebar-menu-list menu-list">
+                                <li class="sidebar-menu-label-second">
+                                    <p>関西</p>
+                                </li>
+                                <li><a href="/about/company-detail/">プロショップツチヤ</a></li>
+                            </ul>
+                            <ul class="sidebar-menu-list menu-list">
+                                <li class="sidebar-menu-label-second">
+                                    <p>中国</p>
+                                </li>
+                                <li><a href="/about/company-detail/">ナカダヤ</a></li>
+                                <li><a href="/about/company-detail/">せと</a></li>
+                                <li><a href="/about/company-detail/">コンドウ</a></li>
+                                <li><a href="/about/company-detail/">めがね高島屋</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="sidebar-images">
+                        <a href="/product/">
+                            <img src="/img/sidebar-image4.png" alt="">
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="container is-widescreen">
+                <div class="columns is-variable is-8">
+                    <div class="column is-3 footer-info">
+                        <div class="is-size-7">
+                            眼鏡店専門ボラリティチェーン
+                        </div>
+                        <div>
+                            <a class="navbar-item" href="/">
+                                <img src="/img/logo.png" alt="プライム21">
+                            </a>
+                        </div>
+                        <div class="footer-phone">
+                            <i class="fas fa-phone"></i>
+                            047-496-3305
+                        </div>
+                    </div>
+                    <div class="column is-3">
+                        <div class="is-size-7 has-text-weight-bold has-text-grey has-text-centered mb-2">
+                            お問い合わせ・資料請求はこちら
+                        </div>
+                        <div class="buttons">
+                            <button class="button is-dark is-small is-fullwidth">
+                                <a href="#">
+                                    <span class="icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                    <span>お問い合わせフォーム</span>
+                                </a>
+                            </button>
+                            <button class="button is-primary is-small is-fullwidth">
+                                <a href="#">
+                                    <span class="icon">
+                                        <i class="fas fa-file"></i>
+                                    </span>
+                                    <span>無料で資料請求</span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="column is-5">
+                        <div class="columns footer-menu">
+                            <ul class="menu column is-5">
+                                <li>
+                                    <a href="/" class="menu-label">
+                                        ホーム
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/about" class="menu-label">
+                                        プライム21とは
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/planning" class="menu-label">
+                                        展示会・イベント情報
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/product" class="menu-label">
+                                        商品一覧
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="menu column is-4">
+                                <a href="/column" class="menu-label">
+                                    コラム
+                                </a>
+                                <li>
+                                    <a href="/column/column-detail/" class="menu-list">
+                                        経営者コラム
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/column/column-detail/" class="menu-list">
+                                        企画販促コラム
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/column/column-detail/" class="menu-list">
+                                        主催者コラム
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/column/column-detail/" class="menu-list">
+                                        特選品コラム
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="menu column is-3">
+                                <li>
+                                    <a href="/diagnosis/" class="menu-label">
+                                        経営者診断
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/company/" class="menu-label">
+                                        会社概要
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </main>
-        <footer>
-
-        </footer>
-        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-        <script type="module">
-            import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
-
-            var swiper = new Swiper ('.swiper', {
-                centeredSlides: true,
-                slidesPerView: 1.8,
-                spaceBetween: 16,
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            });
-        </script>
-    </body>
+        </div>
+        <div class="container is-widescreen navbar footer-bottom">
+            <ul class="navbar-start">
+                <li class="navbar-item">
+                    <a class="is-size-7 has-text-grey" href="#">
+                        プライバシーポリシー
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a class="is-size-7 has-text-grey" href="#">
+                        特定商取引法に関する表示
+                    </a>
+                </li>
+            </ul>
+            <p class="is-size-7 has-text-grey navbar-end navbar-item">
+                Copyright © prime21 All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
 </html>

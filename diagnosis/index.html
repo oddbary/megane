@@ -59,7 +59,7 @@
                     </div>
                 </div>
             </div>
-            <div id="global-nav">
+            <div>
                 <div class="container is-widescreen c_mainnav">
                     <a href="/">
                         <img src="/img/gm1.svg"><span>ホーム</span>
@@ -82,44 +82,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            /**
-             * グローバルナビのクローンを生成
-             */
-            function setCloneNav() {
-                var body = document.body;
-                var globalNav = document.getElementById('global-nav');
-
-                if (!globalNav) return;
-
-                var cloneNav = globalNav.cloneNode(true);
-                cloneNav.id = 'js-clone-nav';
-                cloneNav.classList.add('clone-nav');
-
-                body.insertBefore(cloneNav, body.firstChild);
-            }
-            setCloneNav();
-
-            /**
-             * グローバルナビのクローンをページ上部に移動・固定
-             */
-            function fixedGlobalNav() {
-                var scrollY = window.pageYOffset;
-                var trigger = document.getElementById('js-trigger');
-                var cloneNav = document.getElementById('js-clone-nav');
-
-                if (!cloneNav || !trigger) return;
-
-                var triggerClientRect = trigger.getBoundingClientRect();
-                var triggerY = scrollY + triggerClientRect.top;
-                if (scrollY > triggerY) {
-                    cloneNav.classList.add('is-fixed-nav');
-                } else {
-                    cloneNav.classList.remove('is-fixed-nav');
-                }
-            }
-            window.addEventListener('scroll', fixedGlobalNav);
-        </script>
 
         <div class="sp-header navbar-brand">
             <a class="navbar-item" href="/">
@@ -166,20 +128,6 @@
                 <div id="close" class="close"><span>CLOSE</span></div>
             </div>
         </nav>
-        <script>
-            var nav = document.getElementById('sp-nav');
-            var hamburger = document.getElementById('hamburger');
-            var close = document.getElementById('close');
-           
-            hamburger.addEventListener('click', function() {
-              hamburger.classList.toggle('active');
-              nav.classList.toggle('active');
-            });
-            close.addEventListener('click', function() {
-              hamburger.classList.remove('active');
-              nav.classList.remove('active');
-            });
-        </script>
     </header>
     <section class="breadcrumb-wrap section">
         <nav class="container is-widescreen breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
@@ -213,29 +161,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q1">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q1">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q1">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q1">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -248,29 +196,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q2">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q2">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q2">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q2">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -283,29 +231,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q3">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q3">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q3">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q3">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -318,29 +266,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q4">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q4">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q4">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q4">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -353,29 +301,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q5">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q5">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q5">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q5">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -388,29 +336,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q6">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q6">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q6">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q6">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -423,29 +371,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q7">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q7">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q7">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q7">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -458,29 +406,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q8">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q8">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q8">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q8">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -493,29 +441,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q9">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q9">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q9">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q9">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -528,29 +476,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q10">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q10">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q10">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q10">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -563,29 +511,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q11">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q11">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q11">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q11">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -598,29 +546,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q12">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q12">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q12">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q12">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -633,29 +581,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q13">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q13">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q13">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q13">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -668,29 +616,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q14">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q14">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q14">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q14">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -703,29 +651,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q15">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q15">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q15">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q15">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -738,29 +686,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q16">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q16">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q16">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q16">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -773,29 +721,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q17">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q17">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q17">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q17">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -808,29 +756,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q18">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q18">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q18">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q18">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -843,29 +791,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q19">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q19">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q19">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q19">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -878,29 +826,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q20">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q20">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q20">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q20">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -913,29 +861,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q21">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q21">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q21">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q21">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -948,29 +896,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q22">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q22">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q22">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q22">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -983,29 +931,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q23">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q23">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q23">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q23">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -1018,29 +966,29 @@
                         <label class="radio answer1">
                             <input type="radio" name="q24">
                             <span>
-                            はい
+                                はい
                             </span>
                         </label>
                         <label class="radio answer2">
                             <input type="radio" name="q24">
                             <span>
-                            少し
-                            <br>
-                            当てはまる
+                                少し
+                                <br>
+                                当てはまる
                             </span>
                         </label>
                         <label class="radio answer3">
                             <input type="radio" name="q24">
                             <span>
-                            あまり
-                            <br>
-                            当てはまらない
+                                あまり
+                                <br>
+                                当てはまらない
                             </span>
                         </label>
                         <label class="radio answer4">
                             <input type="radio" name="q24">
                             <span>
-                            いいえ
+                                いいえ
                             </span>
                         </label>
                     </div>
@@ -1050,7 +998,23 @@
         </section>
     </main>
     <footer>
-
+        <div class="container is-widescreen navbar footer-bottom">
+            <ul class="navbar-start">
+                <li class="navbar-item">
+                    <a class="is-size-7 has-text-grey" href="#">
+                        プライバシーポリシー
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a class="is-size-7 has-text-grey" href="#">
+                        特定商取引法に関する表示
+                    </a>
+                </li>
+            </ul>
+            <p class="is-size-7 has-text-grey navbar-end navbar-item">
+                Copyright © prime21 All rights reserved.
+            </p>
+        </div>
     </footer>
 </body>
 </html>

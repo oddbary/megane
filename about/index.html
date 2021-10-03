@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +16,9 @@
     <link rel="stylesheet" href="https://use.typekit.net/rrg6pdr.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/ba68847ce1.js" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
 </head>
+
 <body>
     <header class="pt-4 pb-4">
         <div class="container is-widescreen">
@@ -82,44 +85,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            /**
-             * グローバルナビのクローンを生成
-             */
-            function setCloneNav() {
-                var body = document.body;
-                var globalNav = document.getElementById('global-nav');
-
-                if (!globalNav) return;
-
-                var cloneNav = globalNav.cloneNode(true);
-                cloneNav.id = 'js-clone-nav';
-                cloneNav.classList.add('clone-nav');
-
-                body.insertBefore(cloneNav, body.firstChild);
-            }
-            setCloneNav();
-
-            /**
-             * グローバルナビのクローンをページ上部に移動・固定
-             */
-            function fixedGlobalNav() {
-                var scrollY = window.pageYOffset;
-                var trigger = document.getElementById('js-trigger');
-                var cloneNav = document.getElementById('js-clone-nav');
-
-                if (!cloneNav || !trigger) return;
-
-                var triggerClientRect = trigger.getBoundingClientRect();
-                var triggerY = scrollY + triggerClientRect.top;
-                if (scrollY > triggerY) {
-                    cloneNav.classList.add('is-fixed-nav');
-                } else {
-                    cloneNav.classList.remove('is-fixed-nav');
-                }
-            }
-            window.addEventListener('scroll', fixedGlobalNav);
-        </script>
 
         <div class="sp-header navbar-brand">
             <a class="navbar-item" href="/">
@@ -166,427 +131,595 @@
                 <div id="close" class="close"><span>CLOSE</span></div>
             </div>
         </nav>
-        <script>
-            var nav = document.getElementById('sp-nav');
-            var hamburger = document.getElementById('hamburger');
-            var close = document.getElementById('close');
-           
-            hamburger.addEventListener('click', function() {
-              hamburger.classList.toggle('active');
-              nav.classList.toggle('active');
-            });
-            close.addEventListener('click', function() {
-              hamburger.classList.remove('active');
-              nav.classList.remove('active');
-            });
-        </script>
     </header>
-        <section class="breadcrumb-wrap section">
-            <nav class="container is-widescreen breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
-                <ul>
-                    <li><a href="/">ホーム</a></li>
-                    <li class="is-active"><a href="#" aria-current="page">プライム21とは</a></li>
-                </ul>
-            </nav>
-        </section>
-        <main class="container is-fullhd" id="js-trigger">
-            <div class="container is-widescreen main-wrap">
-                <div class="columns is-variable is-8 is-flex-wrap-wrap">
-                    <div class="maincolumn column">
-                        <section class="page-title section">
-                            <h1 class="title is2">プライム21とは</h1>
-                            <p>
-                                プライム21は、眼鏡専門店向けのボランタリーチェーンです。
-                                <br>
-                                概要テキストが入ります。プライム21は、眼鏡専門店向けのボランタリーチェーンです。
-                            </p>
-                        </section>
-                        <section class="greeting section">
-                            <div class="sub-title1">
-                                <h1 class="title">ご挨拶</h1>
+    <section class="breadcrumb-wrap section">
+        <nav class="container is-widescreen breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li class="is-active"><a href="#" aria-current="page">プライム21とは</a></li>
+            </ul>
+        </nav>
+    </section>
+    <main class="container is-fullhd" id="js-trigger">
+        <div class="container is-widescreen main-wrap">
+            <div class="columns">
+                <div class="maincolumn column">
+                    <section class="page-title section">
+                        <h1 class="title is2">プライム21とは</h1>
+                        <p>
+                            プライム21は、眼鏡専門店向けのボランタリーチェーンです。
+                            <br>
+                            概要テキストが入ります。プライム21は、眼鏡専門店向けのボランタリーチェーンです。
+                        </p>
+                    </section>
+                    <section class="greeting section">
+                        <div class="sub-title1">
+                            <h1 class="title">ご挨拶</h1>
+                        </div>
+                        <div class="greeting-contents columns">
+                            <div class="column is-3">
+                                <img src="../img/greeting.png">
                             </div>
-                            <div class="greeting-contents columns">
+                            <div class="column">
+                                <div class="content">
+                                    <p>
+                                        はじめまして、このたびはプライム２１のホームページをご覧頂き、有難うございます。
+                                    </p>
+                                    <p>
+                                        皆様もご存知のとおり、近年、眼鏡業界は激動の時代です。大手のワンプライス、スリープライスによって単価はどんどん下がるばかり……
+                                        <br>もう眼鏡業界は厳しいのでしょうか……？
+                                        <br>いえいえ、今こそ、我々専門店の時代！本物志向の時代はきています。
+                                    </p>
+                                    <p>
+                                        眼鏡のボランタリーチェーンであるプライム２１では、会員様同士による活発な情報交換のもと、会員の皆様それぞれが成長し、夢や希望を達成していただくことを理想とし、活動しています。
+                                        <br>また、１人１人の会員がそれぞれ、良い会社にしていこうということを目標に日々活動しております。
+                                        <br>専門店らしさを活かして、売上を上げ、たくさんのお客様、従業員、取引先様にもっと喜んでいただく。
+                                        <br>私たちプライム２１は、そんな想いを持つ貴方をサポートしたいと思っています。
+                                        <br>何か変えたいけれど、何から手をつけていいか分からない……
+                                    </p>
+                                    <p>
+                                        そんな時は一度ご相談ください。
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="">株式会社プライム21</p>
+                                    <p class="has-text-weight-bold is-size-6">代表取締役　高橋　俊之</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="philosophy section">
+                        <div class="sub-title1">
+                            <h1 class="title">会員の理念</h1>
+                        </div>
+                        <p class="mb-4">会員は、下記の理念に共感し、理念を実行できるように活動します。</p>
+                        <ul class="philosophy-list has-text-centered px-4">
+                            <li class="philosophy-item">
+                                <h2 class="philosophy-item-title title is-5">素直なこころ</h2>
+                                <p>
+                                    素直にならなければ、情報はなにも入ってきません。
+                                    <br>
+                                    相手が年下であろうと、立場が違おうと、色々な人の意見や考えを素直に、
+                                    <br>
+                                    まずは受け入れることが大切です。
+                                </p>
+                            </li>
+                            <li class="philosophy-item">
+                                <h2 class="philosophy-item-title title is-5">長所をトコトン伸ばす</h2>
+                                <p>
+                                    売上が０でない限り、自店の長所は必ず存在しています。
+                                    <br>
+                                    自店の長所を客観的に把握して、それを販促や商品や売場・接客でお客様に伝えて
+                                    <br>
+                                    伸ばしていきましょう。
+                                </p>
+                            </li>
+                            <li class="philosophy-item">
+                                <h2 class="philosophy-item-title title is-5">オープンマインド</h2>
+                                <p>
+                                    情報やノウハウは、自分から発信してこそ得られるものです。
+                                    <br>
+                                    オープンマインドで、どんどん自己開示をして、有意義な情報や知恵を交換し合い、
+                                    <br>
+                                    成長しましょう。
+                                </p>
+                            </li>
+                            <li class="philosophy-item">
+                                <h2 class="philosophy-item-title title is-5">できる方法を考える</h2>
+                                <p>
+                                    できない、やれない理由を探すのは簡単です。
+                                    <br>
+                                    しかし、やると決めたからには、できる方法をどんどん探し、
+                                    <br>
+                                    考え続けることが大切です。
+                                </p>
+                            </li>
+                            <li class="philosophy-item">
+                                <h2 class="philosophy-item-title title is-5">商売「好き」である</h2>
+                                <p>
+                                    好きという気持ちがあれば時間を忘れて没頭できるものです。
+                                    <br>
+                                    メガネを通じた商売が好きであることが、成長する第一条件です。
+                                </p>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="appeal section">
+                        <div class="sub-title1">
+                            <h1 class="title">加盟の5つのメリット</h1>
+                        </div>
+                        <div class="appeal-text mb-4">
+                            <div class="mb-4">
+                                <img src="../img/appeal.png">
+                            </div>
+                            <h2 class="title is-4 mb-2">
+                                5つのメリットで<span class="has-text-danger">強い眼鏡店</span>を作る！
+                            </h2>
+                            <p>
+                                大手安売り店の出店攻勢が激しくなる中で、様々な情報が飛び交い、正しい情報は何か？
+                                <br>
+                                自分のやり方は時流に乗っているのか？…優れた経営者ほど悩みは尽きないでしょう。
+                                <br>
+                                眼鏡店専門のボランタリーチェーン・プライム21が、あなたのお店を”強い眼鏡店”へと導きます！
+                            </p>
+                        </div>
+                        <ul class="appeal-list">
+                            <li class="appeal-item level-left">
                                 <div class="column is-3">
-                                    <img src="../img/greeting.png">
+                                    <div class="level-item">
+                                        <img src="../img/appeal-icon01.png">
+                                    </div>
                                 </div>
                                 <div class="column">
-                                    <div class="content">
-                                        <p>
-                                            はじめまして、このたびはプライム２１のホームページをご覧頂き、有難うございます。
-                                        </p>
-                                        <p>
-                                            皆様もご存知のとおり、近年、眼鏡業界は激動の時代です。大手のワンプライス、スリープライスによって単価はどんどん下がるばかり……
-                                            <br>もう眼鏡業界は厳しいのでしょうか……？
-                                            <br>いえいえ、今こそ、我々専門店の時代！本物志向の時代はきています。
-                                        </p>
-                                        <p>
-                                            眼鏡のボランタリーチェーンであるプライム２１では、会員様同士による活発な情報交換のもと、会員の皆様それぞれが成長し、夢や希望を達成していただくことを理想とし、活動しています。
-                                            <br>また、１人１人の会員がそれぞれ、良い会社にしていこうということを目標に日々活動しております。
-                                            <br>専門店らしさを活かして、売上を上げ、たくさんのお客様、従業員、取引先様にもっと喜んでいただく。
-                                            <br>私たちプライム２１は、そんな想いを持つ貴方をサポートしたいと思っています。
-                                            <br>何か変えたいけれど、何から手をつけていいか分からない……
-                                        </p>
-                                        <p>
-                                        そんな時は一度ご相談ください。
-                                        </p>
+                                    <h3 class="appeal-item-title title">
+                                        <span class="has-text-primary">01</span><strong>販促力</strong>
+                                    </h3>
+                                    <p class="appeal-item-text">
+                                        株式会社フレネルラインの協力のもと、共同チラシ・DMを作成しています。時流に応じた「当たるチラシ」「効果のあるDM」そして、売上をアップさせるキャンペーン企画を実施しています。加盟店は自由にこの共同チラシ・DMを使うことが可能です。
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="appeal-item level-left">
+                                <div class="column is-3">
+                                    <div class="level-item">
+                                        <img src="../img/appeal-icon02.png">
                                     </div>
-                                    <div>
-                                        <p class="">株式会社プライム21</p>
-                                        <p class="has-text-weight-bold is-size-6">代表取締役　高橋　俊之</p>
+                                </div>
+                                <div class="column">
+                                    <h3 class="appeal-item-title title">
+                                        <span class="has-text-primary">02</span><strong>商品力</strong>
+                                    </h3>
+                                    <p class="appeal-item-text">
+                                        加盟店で売れている商品の情報はもちろん、メーカーから最新の商品情報を入手することで、自社の商品力にみがきをかけることが可能です。
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="appeal-item level-left">
+                                <div class="column is-3">
+                                    <div class="level-item">
+                                        <img src="../img/appeal-icon03.png">
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <h3 class="appeal-item-title title">
+                                        <span class="has-text-primary">03</span><strong>売場力</strong>
+                                    </h3>
+                                    <p class="appeal-item-text">
+                                        いくらチラシやDMを実施して集客できたとしても、店頭で売れる仕組みがなければ、意味がありません。業績アップに成功しているお店で、現場が何を実施しているのかを知り、自店の売場力にみがきをかけましょう。
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="appeal-item level-left">
+                                <div class="column is-3">
+                                    <div class="level-item">
+                                        <img src="../img/appeal-icon04.png">
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <h3 class="appeal-item-title title">
+                                        <span class="has-text-primary">04</span><strong>情報力</strong>
+                                    </h3>
+                                    <p class="appeal-item-text">
+                                        年に４回の全体会には、全会員が集まりますので、そこで情報交換が実施できます。情報を惜しみなく出し合う会員同士だからこそ、明日からの経営に役立てていただけます。
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="appeal-item level-left">
+                                <div class="column is-3">
+                                    <div class="level-item">
+                                        <img src="../img/appeal-icon05.png">
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <h3 class="appeal-item-title title">
+                                        <span class="has-text-primary">05</span><strong>展開力</strong>
+                                    </h3>
+                                    <p class="appeal-item-text">
+                                        共同仕入れや共同チラシなどの共同販促が実施でき、ボランタリーチェーンならではのスケールメリットを活かしたコストダウンが可能です。
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="partnership section">
+                        <div class="sub-title1">
+                            <h1 class="title">全国の加盟店一覧</h1>
+                        </div>
+                        <div>
+                            <div class="partnership-map">
+                                <div class="map-img" id=>
+                                    <img src="../img/partnership-map.png">
+                                </div>
+                                <div class="map-button" id="map-button-1">
+                                    <button class="button">
+                                        <a href="#map-menu-1">北海道・東北</a>
+                                    </button>
+                                </div>
+                                <div class="map-button" id="map-button-2">
+                                    <button class="button">
+                                        <a href="#map-menu-2">関東</a>
+                                    </button>
+                                </div>
+                                <div class="map-button" id="map-button-3">
+                                    <button class="button">
+                                        <a href="#map-menu-3">中部</a>
+                                    </button>
+                                </div>
+                                <div class="map-button" id="map-button-4">
+                                    <button class="button">
+                                        <a href="#map-menu-4">関西</a>
+                                    </button>
+                                </div>
+                                <div class="map-button" id="map-button-5">
+                                    <button class="button">
+                                        <a href="#map-menu-5">中国</a>
+                                    </button>
+                                </div>
+                                <div class="map-button" id="map-button-6">
+                                    <button class="button">
+                                        <a href="#map-menu-6">四国・九州</a>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="partnership-menu menu columns is-3 is-flex-wrap-wrap">
+                                <div id="map-menu-1" class="column is-half">
+                                    <div class="column-inner">
+                                        <div class="partnership-menu-title-1">
+                                            <h2 class="title is-6">北海道・東北</h2>
+                                        </div>
+                                        <ul class="partnership-menu-list-1 menu-list">
+                                            <li>
+                                                <a href="">
+                                                    サカイ
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="map-menu-2" class="column is-half">
+                                    <div class="column-inner">
+                                        <div class="partnership-menu-title-2">
+                                            <h2 class="title is-6">関東</h2>
+                                        </div>
+                                        <ul class="partnership-menu-list-2 menu-list">
+                                            <li>
+                                                <a href="">
+                                                    シティメガネ城田
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    イナリヤ
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    メガネのセイコー（北習志野店）
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    銀美堂時計総本店
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="map-menu-3" class="column is-half">
+                                    <div class="column-inner">
+                                        <div class="partnership-menu-title-3">
+                                            <h2 class="title is-6">中部</h2>
+                                        </div>
+                                        <ul class="partnership-menu-list-3 menu-list">
+                                            <li>
+                                                <a href="">
+                                                    キタオカ
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    ミヤコヤ（十日町市 妻有SC店）
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    マルイチ
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    ミヤコヤ（長岡市）
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="map-menu-4" class="column is-half">
+                                    <div class="column-inner">
+                                        <div class="partnership-menu-title-4">
+                                            <h2 class="title is-6">関西</h2>
+                                        </div>
+                                        <ul class="partnership-menu-list-4 menu-list">
+                                            <li>
+                                                <a href="">
+                                                    プロショップツチヤ
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="map-menu-5" class="column is-half">
+                                    <div class="column-inner">
+                                        <div class="partnership-menu-title-5">
+                                            <h2 class="title is-6">中国</h2>
+                                        </div>
+                                        <ul class="partnership-menu-list-5 menu-list">
+                                            <li>
+                                                <a href="">
+                                                    ナカダヤ
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    せと
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    コンドウ
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    めがね高島屋
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="map-menu-6" class="column is-half">
+                                    <div class="column-inner">
+                                        <div class="partnership-menu-title-6">
+                                            <h2 class="title is-6">四国・九州</h2>
+                                        </div>
+                                        <ul class="partnership-menu-list-6 menu-list">
+                                            <li></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                        </section>
-                        <section class="philosophy section">
-                            <div class="sub-title1">
-                                <h1 class="title">会員の理念</h1>
+                        </div>
+                    </section>
+                </div>
+                <div class="sidebar column is-3">
+                    <section class="sidebar-images">
+                        <a href="/planning">
+                            <img src="/img/sidebar-image1.png" alt="">
+                        </a>
+                        <a href="/about">
+                            <img src="/img/sidebar-image2.png" alt="">
+                        </a>
+                        <a href="/about">
+                            <img src="/img/sidebar-image3.png" alt="">
+                        </a>
+                    </section>
+                    <section class="sidebar-menu-section section">
+                        <div class="control search-wrap">
+                            <input class="input" type="text" placeholder="サイト内を検索">
+                            <button type="submit"></button>
+                        </div>
+                        <div class="sidebar-menu menu">
+                            <div class="sidebar-menu-label menu-label">
+                                <img src="/img/icon-menu.png">
+                                <span>コラムカテゴリー一覧</span>
                             </div>
-                            <p class="mb-4">会員は、下記の理念に共感し、理念を実行できるように活動します。</p>
-                            <ul class="philosophy-list has-text-centered px-4">
-                                <li class="philosophy-item">
-                                    <h2 class="philosophy-item-title title is-5">素直なこころ</h2>
-                                    <p>
-                                        素直にならなければ、情報はなにも入ってきません。
-                                        <br>
-                                        相手が年下であろうと、立場が違おうと、色々な人の意見や考えを素直に、
-                                        <br>
-                                        まずは受け入れることが大切です。
-                                    </p>
-                                </li>
-                                <li class="philosophy-item">
-                                    <h2 class="philosophy-item-title title is-5">長所をトコトン伸ばす</h2>
-                                    <p>
-                                        売上が０でない限り、自店の長所は必ず存在しています。
-                                        <br>
-                                        自店の長所を客観的に把握して、それを販促や商品や売場・接客でお客様に伝えて
-                                        <br>
-                                        伸ばしていきましょう。
-                                    </p>
-                                </li>
-                                <li class="philosophy-item">
-                                    <h2 class="philosophy-item-title title is-5">オープンマインド</h2>
-                                    <p>
-                                        情報やノウハウは、自分から発信してこそ得られるものです。
-                                        <br>
-                                        オープンマインドで、どんどん自己開示をして、有意義な情報や知恵を交換し合い、
-                                        <br>
-                                        成長しましょう。
-                                    </p>
-                                </li>
-                                <li class="philosophy-item">
-                                    <h2 class="philosophy-item-title title is-5">できる方法を考える</h2>
-                                    <p>
-                                        できない、やれない理由を探すのは簡単です。
-                                        <br>
-                                        しかし、やると決めたからには、できる方法をどんどん探し、
-                                        <br>
-                                        考え続けることが大切です。
-                                    </p>
-                                </li>
-                                <li class="philosophy-item">
-                                    <h2 class="philosophy-item-title title is-5">商売「好き」である</h2>
-                                    <p>
-                                        好きという気持ちがあれば時間を忘れて没頭できるものです。
-                                        <br>
-                                        メガネを通じた商売が好きであることが、成長する第一条件です。
-                                    </p>
-                                </li>
+                            <ul class="category-menu-list menu-list">
+                                <li><a href="/column">経営者コラム</a></li>
+                                <li><a href="/column">企画販促コラム</a></li>
+                                <li><a href="/column">主催者コラム</a></li>
+                                <li><a href="/column">特選品コラム</a></li>
                             </ul>
-                        </section>
-                        <section class="appeal section">
-                            <div class="sub-title1">
-                                <h1 class="title">加盟の5つのメリット</h1>
+                        </div>
+                        <div class="sidebar-menu menu">
+                            <div class="sidebar-menu-label menu-label">
+                                <img src="/img/icon-shop.png">
+                                <span>加盟店一覧</span>
                             </div>
-                            <div class="appeal-text mb-4">
-                                <div class="mb-4">
-                                    <img src="../img/appeal.png">
-                                </div>
-                                <h2 class="title is-4 mb-2">
-                                    5つのメリットで<span class="has-text-danger">強い眼鏡店</span>を作る！
-                                </h2>
-                                <p>
-                                    大手安売り店の出店攻勢が激しくなる中で、様々な情報が飛び交い、正しい情報は何か？
-                                    <br>
-                                    自分のやり方は時流に乗っているのか？…優れた経営者ほど悩みは尽きないでしょう。
-                                    <br>
-                                    眼鏡店専門のボランタリーチェーン・プライム21が、あなたのお店を”強い眼鏡店”へと導きます！
-                                </p>
-                            </div>
-                            <ul class="appeal-list">
-                                <li class="appeal-item level-left">
-                                    <div class="column is-3">
-                                        <div class="level-item">
-                                            <img src="../img/appeal-icon01.png">
-                                        </div>
-                                    </div>
-                                    <div class="column">
-                                        <h3 class="appeal-item-title title">
-                                            <span class="has-text-primary">01</span><strong>販促力</strong>
-                                        </h3>
-                                        <p class="appeal-item-text">
-                                            株式会社フレネルラインの協力のもと、共同チラシ・DMを作成しています。時流に応じた「当たるチラシ」「効果のあるDM」そして、売上をアップさせるキャンペーン企画を実施しています。加盟店は自由にこの共同チラシ・DMを使うことが可能です。
-                                        </p>
-                                    </div>
+                            <ul class="sidebar-menu-list menu-list">
+                                <li class="sidebar-menu-label-second">
+                                    <p>北海道・東北</p>
                                 </li>
-                                <li class="appeal-item level-left">
-                                    <div class="column is-3">
-                                        <div class="level-item">
-                                            <img src="../img/appeal-icon02.png">
-                                        </div>
-                                    </div>
-                                    <div class="column">
-                                        <h3 class="appeal-item-title title">
-                                            <span class="has-text-primary">02</span><strong>商品力</strong>
-                                        </h3>
-                                        <p class="appeal-item-text">
-                                            加盟店で売れている商品の情報はもちろん、メーカーから最新の商品情報を入手することで、自社の商品力にみがきをかけることが可能です。
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="appeal-item level-left">
-                                    <div class="column is-3">
-                                        <div class="level-item">
-                                            <img src="../img/appeal-icon03.png">
-                                        </div>
-                                    </div>
-                                    <div class="column">
-                                        <h3 class="appeal-item-title title">
-                                            <span class="has-text-primary">03</span><strong>売場力</strong>
-                                        </h3>
-                                        <p class="appeal-item-text">
-                                            いくらチラシやDMを実施して集客できたとしても、店頭で売れる仕組みがなければ、意味がありません。業績アップに成功しているお店で、現場が何を実施しているのかを知り、自店の売場力にみがきをかけましょう。
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="appeal-item level-left">
-                                    <div class="column is-3">
-                                        <div class="level-item">
-                                            <img src="../img/appeal-icon04.png">
-                                        </div>
-                                    </div>
-                                    <div class="column">
-                                        <h3 class="appeal-item-title title">
-                                            <span class="has-text-primary">04</span><strong>情報力</strong>
-                                        </h3>
-                                        <p class="appeal-item-text">
-                                            年に４回の全体会には、全会員が集まりますので、そこで情報交換が実施できます。情報を惜しみなく出し合う会員同士だからこそ、明日からの経営に役立てていただけます。
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="appeal-item level-left">
-                                    <div class="column is-3">
-                                        <div class="level-item">
-                                            <img src="../img/appeal-icon05.png">
-                                        </div>
-                                    </div>
-                                    <div class="column">
-                                        <h3 class="appeal-item-title title">
-                                            <span class="has-text-primary">05</span><strong>展開力</strong>
-                                        </h3>
-                                        <p class="appeal-item-text">
-                                            共同仕入れや共同チラシなどの共同販促が実施でき、ボランタリーチェーンならではのスケールメリットを活かしたコストダウンが可能です。
-                                        </p>
-                                    </div>
-                                </li>
+                                <li><a href="/about/company-detail/">サカイ</a></li>
                             </ul>
-                        </section>
-                        <section class="partnership section">
-                            <div class="sub-title1">
-                                <h1 class="title">全国の加盟店一覧</h1>
-                            </div>
-                            <div>
-                                <div class="partnership-map">
-                                    <div class="map-img" id=>
-                                        <img src="../img/partnership-map.png">
-                                    </div>
-                                    <div class="map-button" id="map-button-1">
-                                        <button class="button">
-                                            <a href="#map-menu-1">北海道・東北</a>
-                                        </button>
-                                    </div>
-                                    <div class="map-button" id="map-button-2">
-                                        <button class="button">
-                                            <a href="#map-menu-2">関東</a>
-                                        </button>
-                                    </div>
-                                    <div class="map-button" id="map-button-3">
-                                        <button class="button">
-                                            <a href="#map-menu-3">中部</a>
-                                        </button>
-                                    </div>
-                                    <div class="map-button" id="map-button-4">
-                                        <button class="button">
-                                            <a href="#map-menu-4">関西</a>
-                                        </button>
-                                    </div>
-                                    <div class="map-button" id="map-button-5">
-                                        <button class="button">
-                                            <a href="#map-menu-5">中国</a>
-                                        </button>
-                                    </div>
-                                    <div class="map-button" id="map-button-6">
-                                        <button class="button">
-                                            <a href="#map-menu-6">四国・九州</a>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="partnership-menu menu columns is-3 is-flex-wrap-wrap">
-                                    <div id="map-menu-1" class="column is-half">
-                                        <div class="column-inner">
-                                            <div class="partnership-menu-title-1">
-                                                <h2 class="title is-6">北海道・東北</h2>
-                                            </div>
-                                            <ul class="partnership-menu-list-1 menu-list">
-                                                <li>
-                                                    <a href="">
-                                                        サカイ
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div id="map-menu-2" class="column is-half">
-                                        <div class="column-inner">
-                                            <div class="partnership-menu-title-2">
-                                                <h2 class="title is-6">関東</h2>
-                                            </div>
-                                            <ul class="partnership-menu-list-2 menu-list">
-                                                <li>
-                                                    <a href="">
-                                                        シティメガネ城田
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        イナリヤ
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        メガネのセイコー（北習志野店）
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        銀美堂時計総本店
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div id="map-menu-3" class="column is-half">
-                                        <div class="column-inner">
-                                            <div class="partnership-menu-title-3">
-                                                <h2 class="title is-6">中部</h2>
-                                            </div>
-                                            <ul class="partnership-menu-list-3 menu-list">
-                                                <li>
-                                                    <a href="">
-                                                        キタオカ
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        ミヤコヤ（十日町市 妻有SC店）
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        マルイチ
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        ミヤコヤ（長岡市）
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div id="map-menu-4" class="column is-half">
-                                        <div class="column-inner">
-                                            <div class="partnership-menu-title-4">
-                                                <h2 class="title is-6">関西</h2>
-                                            </div>
-                                            <ul class="partnership-menu-list-4 menu-list">
-                                                <li>
-                                                    <a href="">
-                                                        プロショップツチヤ
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div id="map-menu-5" class="column is-half">
-                                        <div class="column-inner">
-                                            <div class="partnership-menu-title-5">
-                                                <h2 class="title is-6">中国</h2>
-                                            </div>
-                                            <ul class="partnership-menu-list-5 menu-list">
-                                                <li>
-                                                    <a href="">
-                                                        ナカダヤ
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        せと
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        コンドウ
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        めがね高島屋
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div id="map-menu-6" class="column is-half">
-                                        <div class="column-inner">
-                                            <div class="partnership-menu-title-6">
-                                                <h2 class="title is-6">四国・九州</h2>
-                                            </div>
-                                            <ul class="partnership-menu-list-6 menu-list">
-                                                <li></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                            <ul class="sidebar-menu-list menu-list">
+                                <li class="sidebar-menu-label-second">
+                                    <p>関東</p>
+                                </li>
+                                <li><a href="/about/company-detail/">シティメガネ城田</a></li>
+                                <li><a href="/about/company-detail/">イナリヤ</a></li>
+                                <li><a href="/about/company-detail/">メガネのセイコー（北習志野店）</a></li>
+                                <li><a href="/about/company-detail/">銀美堂時計総本店</a></li>
+                            </ul>
+                            <ul class="sidebar-menu-list menu-list">
+                                <li class="sidebar-menu-label-second">
+                                    <p>中部</p>
+                                </li>
+                                <li><a href="/about/company-detail/">キタオカ</a></li>
+                                <li><a href="/about/company-detail/">ミヤコヤ（十日町市 妻有SC店）</a></li>
+                                <li><a href="/about/company-detail/">マルイチ</a></li>
+                                <li><a href="/about/company-detail/">ミヤコヤ（長岡市）</a></li>
+                            </ul>
+                            <ul class="sidebar-menu-list menu-list">
+                                <li class="sidebar-menu-label-second">
+                                    <p>関西</p>
+                                </li>
+                                <li><a href="/about/company-detail/">プロショップツチヤ</a></li>
+                            </ul>
+                            <ul class="sidebar-menu-list menu-list">
+                                <li class="sidebar-menu-label-second">
+                                    <p>中国</p>
+                                </li>
+                                <li><a href="/about/company-detail/">ナカダヤ</a></li>
+                                <li><a href="/about/company-detail/">せと</a></li>
+                                <li><a href="/about/company-detail/">コンドウ</a></li>
+                                <li><a href="/about/company-detail/">めがね高島屋</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="sidebar-images">
+                        <a href="/product/">
+                            <img src="/img/sidebar-image4.png" alt="">
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="container is-widescreen">
+                <div class="columns is-variable is-8">
+                    <div class="column is-3 footer-info">
+                        <div class="is-size-7">
+                            眼鏡店専門ボラリティチェーン
+                        </div>
+                        <div>
+                            <a class="navbar-item" href="/">
+                                <img src="/img/logo.png" alt="プライム21">
+                            </a>
+                        </div>
+                        <div class="footer-phone">
+                            <i class="fas fa-phone"></i>
+                            047-496-3305
+                        </div>
                     </div>
-                    <div class="sidebar column is-3">
-
+                    <div class="column is-3">
+                        <div class="is-size-7 has-text-weight-bold has-text-grey has-text-centered mb-2">
+                            お問い合わせ・資料請求はこちら
+                        </div>
+                        <div class="buttons">
+                            <button class="button is-dark is-small is-fullwidth">
+                                <a href="#">
+                                    <span class="icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                    <span>お問い合わせフォーム</span>
+                                </a>
+                            </button>
+                            <button class="button is-primary is-small is-fullwidth">
+                                <a href="#">
+                                    <span class="icon">
+                                        <i class="fas fa-file"></i>
+                                    </span>
+                                    <span>無料で資料請求</span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="column is-5">
+                        <div class="columns footer-menu">
+                            <ul class="menu column is-5">
+                                <li>
+                                    <a href="/" class="menu-label">
+                                        ホーム
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/about" class="menu-label">
+                                        プライム21とは
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/planning" class="menu-label">
+                                        展示会・イベント情報
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/product" class="menu-label">
+                                        商品一覧
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="menu column is-4">
+                                <a href="/column" class="menu-label">
+                                    コラム
+                                </a>
+                                <li>
+                                    <a href="/column/column-detail/" class="menu-list">
+                                        経営者コラム
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/column/column-detail/" class="menu-list">
+                                        企画販促コラム
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/column/column-detail/" class="menu-list">
+                                        主催者コラム
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/column/column-detail/" class="menu-list">
+                                        特選品コラム
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="menu column is-3">
+                                <li>
+                                    <a href="/diagnosis/" class="menu-label">
+                                        経営者診断
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/company/" class="menu-label">
+                                        会社概要
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </main>
-        <footer>
+        </div>
+        <div class="container is-widescreen navbar footer-bottom">
+            <ul class="navbar-start">
+                <li class="navbar-item">
+                    <a class="is-size-7 has-text-grey" href="#">
+                        プライバシーポリシー
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a class="is-size-7 has-text-grey" href="#">
+                        特定商取引法に関する表示
+                    </a>
+                </li>
+            </ul>
+            <p class="is-size-7 has-text-grey navbar-end navbar-item">
+                Copyright © prime21 All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
 
-        </footer>
-        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-        <script type="module">
-            import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
-
-            var swiper = new Swiper ('.swiper', {
-                centeredSlides: true,
-                slidesPerView: 1.8,
-                spaceBetween: 16,
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            });
-        </script>
-    </body>
 </html>
