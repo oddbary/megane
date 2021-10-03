@@ -35,6 +35,11 @@ a.has-text-primary:hover{
 .navbar-brand img{
   max-height: 40px;
 }
+
+.hero.is-primary{
+  background: #00A043;
+}
+
 .button.is-primary a,
 .button.is-dark a{
   color: #fff;
@@ -60,11 +65,16 @@ a.has-text-primary:hover{
   box-shadow: none;
   border: 1px solid #00A043;
 }
-
+.has-text-primary-dark{
+  color: #00A043 !important;
+}
 .has-background-primary{
   background: #00A043 !important;
 }
 .has-background-primary-light{
+  background: #E9FEF0 !important;
+}
+.has-background-light{
   background: #E9FEF0 !important;
 }
 .section {
@@ -1100,4 +1110,65 @@ footer .navbar-item img{
 }
 .mypage-header{
   background: #fff;
+}
+.diagnosis.section .diagnosis-list{
+  max-width: 380px;
+  margin: 0 auto;
+}
+.diagnosis-question .title{
+  margin-bottom: 24px;
+  font-size: 17px;
+}
+.diagnosis-item{
+  margin-top: 96px;
+}
+.diagnosis-item .control .answer{
+  width: 25%;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.diagnosis-item .control{
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+.diagnosis-item input{
+  display: none;
+}
+.diagnosis-item label{
+  display: block;
+  width: 25%;
+}
+.diagnosis-item label span::before{
+  content: "";
+  display: block;
+  height: 60px;
+  width: 60px;
+  border: 15px solid #FFFDFD;
+  border-radius: 30px;
+  margin: 0 auto 8px;
+  opacity: 0.1;
+}
+.diagnosis-item label span{
+  opacity: 0.5;
+}
+.diagnosis-item .answer1 span::before{
+  border-color: #eb5959;
+}
+.diagnosis-item .answer2 span::before{
+  border-color: #f88f96;
+}
+.diagnosis-item .answer3 span::before{
+  border-color: #98cbf0;
+}
+.diagnosis-item .answer4 span::before{
+  border-color: #288fd4;
+}
+input[type=radio]:checked + span {
+  opacity: 1;
+}
+input[type=radio]:checked + span::before {
+  opacity: 1;
 }
